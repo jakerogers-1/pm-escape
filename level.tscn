@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://br2jn6oayoi6j"]
 
 [ext_resource type="Texture2D" uid="uid://b6op6wqtpq35" path="res://kenney_top-down-shooter/Tilesheet/tilesheet_complete.png" id="1_u52ul"]
+[ext_resource type="Script" uid="uid://dfvnpuc68o611" path="res://objects.gd" id="2_vonw3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vonw3"]
 texture = ExtResource("1_u52ul")
@@ -1611,3 +1612,4 @@ tile_set = SubResource("TileSet_o6tdh")
 [node name="Objects" type="TileMapLayer" parent="." unique_id=1899535107]
 tile_map_data = PackedByteArray("AAAAAAMAAAAQABIAAAD//wMAAAAOABIAAAACAP7/AAAYAAgAAAD8//3/AAAUAAUAAAD9//3/AAAUAAQAAAADAAQAAAAXAAUAAAAEAAQAAAAYAAUAAAD8/wIAAAAOABAAAAD9/wIAAAAPABAAAAD+/wIAAAAQABAAAAA=")
 tile_set = SubResource("TileSet_c0m66")
+script = ExtResource("2_vonw3")
