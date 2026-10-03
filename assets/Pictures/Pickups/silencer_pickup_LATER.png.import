@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:assets/Pictures/Pickups/silencer_pickup_LATER.png.import
 uid="uid://drkfffylfjqh4"
 path="res://.godot/imported/silencer_pickup_LATER.png-359b38b303c7a4a06d36e3260c74d6c7.ctex"
+========
+uid="uid://cuuhy1mu35mnw"
+path="res://.godot/imported/Player.png-e2f068cfb4b8070c2a78660082e51208.ctex"
+>>>>>>>> 33aae8905222940a8bd56e4165efb8a88c6b7558:Player/Player.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:assets/Pictures/Pickups/silencer_pickup_LATER.png.import
 source_file="res://assets/Pictures/Pickups/silencer_pickup_LATER.png"
 dest_files=["res://.godot/imported/silencer_pickup_LATER.png-359b38b303c7a4a06d36e3260c74d6c7.ctex"]
+========
+source_file="res://player/Player.png"
+dest_files=["res://.godot/imported/Player.png-e2f068cfb4b8070c2a78660082e51208.ctex"]
+>>>>>>>> 33aae8905222940a8bd56e4165efb8a88c6b7558:Player/Player.png.import
 
 [params]
 

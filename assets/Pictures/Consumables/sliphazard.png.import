@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:assets/Pictures/Consumables/sliphazard.png.import
 uid="uid://duba3ir558sdf"
 path="res://.godot/imported/sliphazard.png-9222b59b2a02a3de22c0a61e15b3bf27.ctex"
+========
+uid="uid://d1pgylq7mu7r6"
+path="res://.godot/imported/New Piskel (6).png-376bbd8fb37cef340e29d238b179f46b.ctex"
+>>>>>>>> 33aae8905222940a8bd56e4165efb8a88c6b7558:Player/New Piskel (6).png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:assets/Pictures/Consumables/sliphazard.png.import
 source_file="res://assets/Pictures/Consumables/sliphazard.png"
 dest_files=["res://.godot/imported/sliphazard.png-9222b59b2a02a3de22c0a61e15b3bf27.ctex"]
+========
+source_file="res://player/New Piskel (6).png"
+dest_files=["res://.godot/imported/New Piskel (6).png-376bbd8fb37cef340e29d238b179f46b.ctex"]
+>>>>>>>> 33aae8905222940a8bd56e4165efb8a88c6b7558:Player/New Piskel (6).png.import
 
 [params]
 

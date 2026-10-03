@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:assets/Pictures/Pickups/handgun_pickup_LATER.png.import
 uid="uid://cs7aq0enmvnqu"
 path="res://.godot/imported/handgun_pickup_LATER.png-f854d5e0160b5dc2dfbca686574c1620.ctex"
+========
+uid="uid://8gl8l22r0suq"
+path="res://.godot/imported/Player (1).png-3ca66aca8984d8cb5a7f72bcc2603854.ctex"
+>>>>>>>> 33aae8905222940a8bd56e4165efb8a88c6b7558:Player/Player (1).png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:assets/Pictures/Pickups/handgun_pickup_LATER.png.import
 source_file="res://assets/Pictures/Pickups/handgun_pickup_LATER.png"
 dest_files=["res://.godot/imported/handgun_pickup_LATER.png-f854d5e0160b5dc2dfbca686574c1620.ctex"]
+========
+source_file="res://player/Player (1).png"
+dest_files=["res://.godot/imported/Player (1).png-3ca66aca8984d8cb5a7f72bcc2603854.ctex"]
+>>>>>>>> 33aae8905222940a8bd56e4165efb8a88c6b7558:Player/Player (1).png.import
 
 [params]
 
