@@ -1,4 +1,4 @@
-extends Node2D
+extends PhysicsBody2D
 
 # How fast the player moves in meters per second.
 @export var speed = 14
@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("stop")
 		
 	#delta = frame length
-	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	move_and_collide(velocity * delta)
+	#position += velocity * delta
+	#position = position.clamp(Vector2.ZERO, screen_size)
 	look_at(get_global_mouse_position())
