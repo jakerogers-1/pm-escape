@@ -2,6 +2,7 @@
 
 ## TO DO SUNDAY
 ESSENTIAL
+- Fix tiles - walls not containing any floor so we can clearly seperate
 - Make rooms
 - Add/and or make custom people sprites for enemies
 - Win area/outside (probably just a fixed final room that's big and looks like outside?)

@@ -67,6 +67,15 @@ func _ready() -> void:
 	player.global_position = get_doors(room_data[0])["lower"].global_position
 
 	enemies = get_tree().get_nodes_in_group("EnemyAgent")
+	
+	# Setup navigation mesh - didn't seem to be working
+	#var new_navigation_mesh = NavigationPolygon.new()
+	#var maxY = room_data[room_data.size() - 1].global_position.y + 100
+	#var bounding_outline = PackedVector2Array([Vector2(0, 0), Vector2(0, maxY), Vector2(50, maxY), Vector2(50, 0)])
+	#new_navigation_mesh.add_outline(bounding_outline)
+	#var mesh_source = NavigationMeshSourceGeometryData2D.new()
+	#mesh_source.add_traversable_outline(bounding_outline)
+	#NavigationServer2D.bake_from_source_geometry_data_async(new_navigation_mesh, mesh_source, Call_Bake)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	updateEnemies(enemies)
@@ -91,3 +100,6 @@ func get_doors(room: Node) -> Dictionary:
 
 
 	return doors_dict
+	
+#func Call_Bake() -> void:
+	#bake_navigation_polygon(true)

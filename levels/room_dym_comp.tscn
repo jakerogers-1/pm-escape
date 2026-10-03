@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://cqyy6baken4je" path="res://levels/room_dym_comp.gd" id="1_d4mfi"]
 
-[node name="RoomDymComp" type="Node2D" unique_id=1754907725]
+[node name="RoomDymComp" type="Node2D" unique_id=2010212910]
 script = ExtResource("1_d4mfi")
