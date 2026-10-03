@@ -1,11 +1,14 @@
 [gd_scene format=4 uid="uid://cloeklnrm7xkr"]
 
 [ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_ftkcf"]
+[ext_resource type="PackedScene" uid="uid://ds5ojxjv4sjig" path="res://Enemy.tscn" id="2_7xk2d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
 size = Vector2(32, 32)
 
 [node name="Room_a" type="Node2D" unique_id=358869070]
+
+[node name="Enemy" parent="." unique_id=1880207505 groups=["Enemy"] instance=ExtResource("2_7xk2d")]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=49936108]
 tile_map_data = PackedByteArray("AAD//wMAAQAAAAAAAAAAAPz/AQAAAAAAAAABAPz/AQAAAAAAAAD+//3/AQAAAAAAAAD+//7/AQAAAAAAAAD+////AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD+/wIAAQAAAAAAAAD///3/AQAAAAAAAAD///7/AQAAAAAAAAD/////AQAAAAAAAAD//wAAAQAAAAAAAAD//wEAAQAAAAAAAAD//wIAAQAAAAAAAAAAAP3/AQAAAAAAAAAAAP7/AQAAAAAAAAAAAP//AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAABAP3/AQAAAAAAAAABAP7/AQAAAAAAAAABAP//AQAAAAAAAAABAAAAAQAAAAAAAAABAAEAAQAAAAAAAAABAAIAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wMAAQAAAAAAAAABAPv/AQAAAAAAAAA=")

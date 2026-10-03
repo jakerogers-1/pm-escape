@@ -29,6 +29,7 @@ project/assembly_name="pm-escape"
 
 Enemy=""
 Player=""
+EnemyAgent=""
 
 [input]
 

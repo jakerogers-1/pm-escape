@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ds5ojxjv4sjig"]
 
 [ext_resource type="Script" uid="uid://cwpg70u7ixo4h" path="res://enemy.gd" id="1_s7bn3"]
-[ext_resource type="Texture2D" uid="uid://cyepbl05vuwvi" path="res://assets/Spritesheet/CurrentPlayer.png" id="2_s7bn3"]
+[ext_resource type="Texture2D" uid="uid://dobxcaxp2qv4q" path="res://assets/Spritesheet/CurrentPlayer.png" id="2_s7bn3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hac7"]
 atlas = ExtResource("2_s7bn3")
@@ -61,9 +61,9 @@ size = Vector2(16, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ydvyy"]
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1880207505 groups=["Enemy"]]
+[node name="Enemy" type="CharacterBody2D" unique_id=1880207505 groups=["EnemyAgent"]]
 z_index = 1
-collision_layer = 9
+collision_layer = 15
 collision_mask = 6
 motion_mode = 1
 platform_wall_layers = 6
@@ -80,11 +80,9 @@ texture_filter = 1
 position = Vector2(5.94, 0)
 rotation = -1.5707964
 sprite_frames = SubResource("SpriteFrames_ydvyy")
-animation = &"walk"
-frame_progress = 0.35633788
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831621914 groups=["Enemy"]]
-position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_ydvyy")
 
 [node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=1418964012]

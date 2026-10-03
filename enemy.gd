@@ -18,6 +18,7 @@ func _ready() -> void:
 	navigation_agent.velocity_computed.connect(_on_velocity_computed)
 
 func set_movement_target(movement_target: Vector2) -> void:
+	print(movement_target)
 	navigation_agent.set_target_position(movement_target)
 
 

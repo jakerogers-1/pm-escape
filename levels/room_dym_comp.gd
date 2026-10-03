@@ -5,6 +5,10 @@ var room_b_scene = preload("res://levels/room_b.tscn")
 
 var player_scene = preload("res://Player/Player.tscn")
 
+var enemies : Array[Node] = [] 
+
+var player
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 
@@ -12,7 +16,7 @@ func _ready() -> void:
 	# ...
 	
 	var room_names = ['a', 'b']
-	var room_nums = 4
+	var room_nums = 10
 
 	var room_data = []
 
@@ -58,13 +62,19 @@ func _ready() -> void:
 		)
 			
 	# Spawn player
-	var player = player_scene.instantiate()
+	player = player_scene.instantiate()
 	add_child(player)
 	player.global_position = get_doors(room_data[0])["lower"].global_position
 
+	enemies = get_tree().get_nodes_in_group("EnemyAgent")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	updateEnemies(enemies)
+	
+func updateEnemies(enems) -> void:
+	for enemy in enems:
+		if enemy != null:
+			enemy.set_movement_target(player.global_position)
 	
 func get_doors(room: Node) -> Dictionary:
 	var doors_dict = { "upper" : null, "lower" : null }

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cf78mdoun6yfq"]
 
 [ext_resource type="Script" uid="uid://bie1e45iax3gm" path="res://Player/Player.gd" id="1_tok1r"]
-[ext_resource type="Texture2D" uid="uid://cyepbl05vuwvi" path="res://assets/Spritesheet/CurrentPlayer.png" id="2_6ysni"]
-[ext_resource type="Texture2D" uid="uid://dybnohl1a1qlb" path="res://assets/Spritesheet/Death.png" id="2_vlldt"]
+[ext_resource type="Texture2D" uid="uid://dobxcaxp2qv4q" path="res://assets/Spritesheet/CurrentPlayer.png" id="2_6ysni"]
+[ext_resource type="Texture2D" uid="uid://cnd1t6r8s6l4w" path="res://assets/Spritesheet/Death.png" id="2_vlldt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v0k0e"]
 atlas = ExtResource("2_vlldt")
@@ -122,14 +122,14 @@ collision_layer = 14
 collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_tok1r")
-speed = 454
+speed = 200
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514569922]
-position = Vector2(19.47, 0)
+position = Vector2(6.905, 0)
 rotation = -1.5707964
-scale = Vector2(3.23, 3.23)
+scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_epypp")
-animation = &"death"
+animation = &"stop"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1259718866]
 visible = false
@@ -141,13 +141,14 @@ texture = SubResource("CompressedTexture2D_ddoul")
 shape = SubResource("RectangleShape2D_epypp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=368028478]
+zoom = Vector2(2.185, 2.185)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 rotation_smoothing_enabled = true
 
 [node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=111381371 groups=["Player"]]
-position = Vector2(37.495, 0)
-scale = Vector2(4.395, 4.395)
+position = Vector2(8.78, 0)
+scale = Vector2(1.365, 1.365)
 shape = SubResource("CircleShape2D_1tu3e")
 target_position = Vector2(10.89, 0)
 collision_mask = 7

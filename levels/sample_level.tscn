@@ -12,15 +12,15 @@ enemies = [NodePath("Enemy"), NodePath("Enemy2")]
 
 [node name="Room1" parent="." unique_id=358869070 instance=ExtResource("1_srajl")]
 
-[node name="Player" parent="." unique_id=648669737 instance=ExtResource("2_oegl2")]
+[node name="Player" parent="." unique_id=648669737 groups=["Enemy"] instance=ExtResource("2_oegl2")]
 position = Vector2(209, 150)
 
 [node name="Enemy" parent="." unique_id=1880207505 instance=ExtResource("3_oegl2")]
 position = Vector2(510, 528)
-scale = Vector2(3.235, 3.235)
+scale = Vector2(0.62, 0.62)
 movement_speed = 100.0
 
 [node name="Enemy2" parent="." unique_id=269274 instance=ExtResource("3_oegl2")]
 position = Vector2(510, 528)
-scale = Vector2(3.225, 3.225)
+scale = Vector2(1, 1)
 movement_speed = 100.0

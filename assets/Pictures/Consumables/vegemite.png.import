@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/Pictures/Consumables/vegemite.png.import
-uid="uid://bl4uvt6x8nhw4"
+uid="uid://dofl1qye4j3rv"
 path="res://.godot/imported/vegemite.png-cfd25e2a2a796b033d7eb4927cfef527.ctex"
-========
-uid="uid://batp6d5cxuar1"
-path="res://.godot/imported/DraftPlayer.png-26d777bca6e78c70e6ec11edb6c40736.ctex"
->>>>>>>> 33aae8905222940a8bd56e4165efb8a88c6b7558:Player/DraftPlayer.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/Pictures/Consumables/vegemite.png.import
 source_file="res://assets/Pictures/Consumables/vegemite.png"
 dest_files=["res://.godot/imported/vegemite.png-cfd25e2a2a796b033d7eb4927cfef527.ctex"]
-========
-source_file="res://player/DraftPlayer.png"
-dest_files=["res://.godot/imported/DraftPlayer.png-26d777bca6e78c70e6ec11edb6c40736.ctex"]
->>>>>>>> 33aae8905222940a8bd56e4165efb8a88c6b7558:Player/DraftPlayer.png.import
 
 [params]
 
