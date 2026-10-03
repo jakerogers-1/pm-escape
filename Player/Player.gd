@@ -7,6 +7,12 @@ extends CharacterBody2D
 var attacking = false
 var rightHand = true
 var dead = false
+
+var objectHeld
+var objectOGParent
+
+func _ready() -> void:
+	dead = false
 	
 func _process(delta: float) -> void:
 	if dead:
@@ -32,7 +38,10 @@ func _process(delta: float) -> void:
 	else:
 		if !attacking:
 			$AnimatedSprite2D.play("stop")
+	
+	check_pickup()
 		
+
 	#delta = frame length
 	move_and_slide()
 
@@ -54,6 +63,27 @@ func attack() -> void:
 			if collider.is_in_group("Enemy"):
 				collider.damage(1, position)
 	attacking = true
+	
+func check_pickup():
+	if Input.is_action_just_pressed("pickup"):
+		if $ShapeCast2D.is_colliding():
+			var collision_count = $ShapeCast2D.get_collision_count()
+			for i in range(collision_count):
+				var collider = $ShapeCast2D.get_collider(i)
+				if collider.is_in_group("Throwable"):
+					print("throwable found")
+					objectOGParent = collider.get_parent()
+					if objectOGParent != null:
+						objectOGParent.remove_child(collider)
+					self.add_child(collider)
+					collider.position = Vector2.ZERO
+					objectHeld = collider
+	if Input.is_action_just_released("pickup"):
+		if objectHeld != null:
+			remove_child(objectHeld)
+			objectOGParent.add_child(objectHeld)
+			objectHeld.global_position = global_position
+			objectHeld = null
 	
 func take_damage():
 	if !dead:

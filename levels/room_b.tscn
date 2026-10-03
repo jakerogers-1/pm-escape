@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://1ef866d1q7ig"]
 
 [ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_r4wui"]
+[ext_resource type="PackedScene" uid="uid://c4ext656676x1" path="res://Hazard.tscn" id="2_uafw4"]
+[ext_resource type="PackedScene" uid="uid://btdmjjyq4ouby" path="res://Throwable.tscn" id="3_u04tq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
 size = Vector2(32, 32)
@@ -29,3 +31,9 @@ texture_filter = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=796788569]
 position = Vector2(16, -176)
 shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="Hazard" parent="." unique_id=1476280909 instance=ExtResource("2_uafw4")]
+position = Vector2(-53, -71)
+
+[node name="Throwable" parent="." unique_id=486741267 instance=ExtResource("3_u04tq")]
+position = Vector2(-74, 108)

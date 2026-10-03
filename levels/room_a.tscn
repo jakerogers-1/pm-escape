@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_ftkcf"]
 [ext_resource type="PackedScene" uid="uid://ds5ojxjv4sjig" path="res://Enemy.tscn" id="2_7xk2d"]
+[ext_resource type="PackedScene" uid="uid://c4ext656676x1" path="res://Hazard.tscn" id="3_hyh1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
 size = Vector2(32, 32)
@@ -31,3 +32,6 @@ shape = SubResource("RectangleShape2D_6w6ra")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=796788569]
 position = Vector2(48, -144)
 shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="Hazard" parent="." unique_id=1476280909 instance=ExtResource("3_hyh1d")]
+position = Vector2(49, -42)

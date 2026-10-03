@@ -20,7 +20,6 @@ func _ready() -> void:
 
 
 func set_movement_target(movement_target: Vector2) -> void:
-	print(movement_target)
 	navigation_agent.set_target_position(movement_target)
 
 
@@ -35,13 +34,17 @@ func damage(amount: int, player_pos: Vector2) -> void:
 	knockback_velocity = knockback_direction * max(knockback_strength + randomKnock, 0)
 	is_being_knocked_back = true
 	
-	var tween = create_tween()
-	tween.tween_property(self, "modulate", Color(0.5, 0.5, 0.5, 1.0), 0.05)
-	tween.tween_property(self, "modulate", Color(1, 1, 1, 1.0), 0.35)
 	
+	
+	var tween = create_tween()
 	if health <= 0:
 		$Timer.start()
 		tween.tween_property(self, "scale", Vector2(0,0), 0.3)
+	else:
+		tween.tween_property(self, "modulate", Color(0.5, 0.5, 0.5, 1.0), 0.05)
+		tween.tween_property(self, "modulate", Color(1, 1, 1, 1.0), 0.35)
+	
+
 
 
 func _physics_process(delta: float) -> void:
