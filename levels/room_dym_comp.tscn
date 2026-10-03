@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://couvet5wf7rwm"]
+
+[ext_resource type="Script" uid="uid://c2f7ab868rq4c" path="res://levels/room_dym_comp.gd" id="1_d4mfi"]
+
+[node name="RoomDymComp" type="Node2D" unique_id=1754907725]
+script = ExtResource("1_d4mfi")
