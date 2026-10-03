@@ -61,9 +61,9 @@ size = Vector2(16, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ydvyy"]
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1880207505 groups=["EnemyAgent"]]
+[node name="Enemy" type="CharacterBody2D" unique_id=1880207505 groups=["Enemy", "EnemyAgent"]]
 z_index = 1
-collision_layer = 15
+collision_layer = 9
 collision_mask = 6
 motion_mode = 1
 platform_wall_layers = 6
@@ -85,7 +85,7 @@ animation = &"attack"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831621914 groups=["Enemy"]]
 shape = SubResource("RectangleShape2D_ydvyy")
 
-[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=1418964012]
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=1418964012 groups=["Enemy"]]
 shape = SubResource("CircleShape2D_ydvyy")
 target_position = Vector2(6.255, 0)
 collision_mask = 8
