@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ds5ojxjv4sjig"]
+
+[ext_resource type="Script" uid="uid://cwpg70u7ixo4h" path="res://enemy.gd" id="1_s7bn3"]
+[ext_resource type="Texture2D" uid="uid://bmdmmtp8m0qjt" path="res://kenney_top-down-shooter/PNG/Man Blue/manBlue_stand.png" id="1_tt7e2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ydvyy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tt7e2")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydvyy"]
+size = Vector2(16, 20)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1880207505]
+collision_layer = 6
+collision_mask = 6
+motion_mode = 1
+platform_wall_layers = 6
+script = ExtResource("1_s7bn3")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1952978053]
+path_desired_distance = 9.17
+path_max_distance = 32.0
+path_postprocessing = 1
+
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=755319706]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ydvyy")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831621914]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_ydvyy")

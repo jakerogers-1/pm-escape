@@ -3,13 +3,8 @@ extends CharacterBody2D
 # How fast the player moves in meters per second.
 @export var speed = 14
 
-var screen_size #Size of the game window
-
 var attacking = false;
 var rightHand = true;
-
-func _ready() -> void:
-	screen_size = get_viewport_rect().size
 	
 func _process(delta: float) -> void:
 	velocity = Vector2.ZERO # The player's movement vector.
