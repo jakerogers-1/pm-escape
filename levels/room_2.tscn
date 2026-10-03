@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://xpcovci5djfs"]
 
-[ext_resource type="Texture2D" uid="uid://b6op6wqtpq35" path="res://kenney_top-down-shooter/Tilesheet/tilesheet_complete.png" id="1_hlhp6"]
+[ext_resource type="Texture2D" uid="uid://b6op6wqtpq35" path="res://assets/Tilesheet/tilesheet_complete.png" id="1_hlhp6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnmfa"]
 texture = ExtResource("1_hlhp6")
