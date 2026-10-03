@@ -1,14 +1,8 @@
 [gd_resource type="TileSet" format=3 uid="uid://chvs2sqb4kccx"]
 
 [ext_resource type="Texture2D" uid="uid://dbcom14xpsmlq" path="res://assets/Spritesheet/spritesheet_carpet_and_walls.png" id="1_0fbcl"]
-[ext_resource type="Texture2D" uid="uid://dyup85gded7rf" path="res://assets/Tilesheet/spritesheet_carpet_and_walls (1).png" id="1_yjh4e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0fbcl"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvdvc"]
-texture = ExtResource("1_yjh4e")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0fbcl"]
 texture = ExtResource("1_0fbcl")
@@ -65,10 +59,17 @@ texture_region_size = Vector2i(32, 32)
 2:3/0 = 0
 1:5/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0fbcl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yjh4e"]
+texture = SubResource("CompressedTexture2D_0fbcl")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 6
 physics_layer_0/collision_mask = 6
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_0fbcl")
 sources/1 = SubResource("TileSetAtlasSource_0fbcl")
-sources/0 = SubResource("TileSetAtlasSource_dvdvc")
+sources/2 = SubResource("TileSetAtlasSource_yjh4e")
