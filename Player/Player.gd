@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 # How fast the player moves in meters per second.
 @export var speed = 14
+@export var throwForce = 100
 #@export var health : int = 5
 
 var attacking = false
@@ -65,12 +66,12 @@ func attack() -> void:
 	attacking = true
 	
 func check_pickup():
-	if Input.is_action_just_pressed("pickup"):
+	if Input.is_action_just_pressed("pickup") && objectHeld == null:
 		if $ShapeCast2D.is_colliding():
 			var collision_count = $ShapeCast2D.get_collision_count()
 			for i in range(collision_count):
 				var collider = $ShapeCast2D.get_collider(i)
-				if collider.is_in_group("Throwable"):
+				if collider.is_in_group("Throwable") && objectHeld == null:
 					print("throwable found")
 					objectOGParent = collider.get_parent()
 					if objectOGParent != null:
@@ -83,6 +84,7 @@ func check_pickup():
 			remove_child(objectHeld)
 			objectOGParent.add_child(objectHeld)
 			objectHeld.global_position = global_position
+			objectHeld.throw(global_position.direction_to(get_global_mouse_position()), throwForce)
 			objectHeld = null
 	
 func take_damage():

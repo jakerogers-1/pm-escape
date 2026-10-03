@@ -17,7 +17,9 @@ var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	navigation_agent.velocity_computed.connect(_on_velocity_computed)
-
+	rng.randomize()
+	var randomSpeed = rng.randf() * 20 - 10
+	movement_speed = max(movement_speed + randomSpeed, 1)
 
 func set_movement_target(movement_target: Vector2) -> void:
 	navigation_agent.set_target_position(movement_target)

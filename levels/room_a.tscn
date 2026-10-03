@@ -35,3 +35,18 @@ shape = SubResource("RectangleShape2D_6w6ra")
 
 [node name="Hazard" parent="." unique_id=1476280909 instance=ExtResource("3_hyh1d")]
 position = Vector2(49, -42)
+
+[node name="Enemy2" parent="." unique_id=1709005417 instance=ExtResource("2_7xk2d")]
+position = Vector2(-2, 83)
+
+[node name="Enemy3" parent="." unique_id=158731943 instance=ExtResource("2_7xk2d")]
+position = Vector2(-42, 52)
+
+[node name="Enemy4" parent="." unique_id=969053352 instance=ExtResource("2_7xk2d")]
+position = Vector2(43, 53)
+
+[node name="Enemy5" parent="." unique_id=1266066198 instance=ExtResource("2_7xk2d")]
+position = Vector2(10, -71)
+
+[node name="Enemy6" parent="." unique_id=160084788 instance=ExtResource("2_7xk2d")]
+position = Vector2(-44, -51)
