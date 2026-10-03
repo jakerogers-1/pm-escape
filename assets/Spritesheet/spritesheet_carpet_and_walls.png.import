@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbcom14xpsmlq"
-path="res://.godot/imported/spritesheet_carpet_and_walls.png-f80f5e551d9939ddd10743fbfcd72b7c.ctex"
+path="res://.godot/imported/spritesheet_carpet_and_walls.png-2856e315ee66d705778a9ef4e9496da9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_top-down-shooter/Spritesheet/spritesheet_carpet_and_walls.png"
-dest_files=["res://.godot/imported/spritesheet_carpet_and_walls.png-f80f5e551d9939ddd10743fbfcd72b7c.ctex"]
+source_file="res://assets/Spritesheet/spritesheet_carpet_and_walls.png"
+dest_files=["res://.godot/imported/spritesheet_carpet_and_walls.png-2856e315ee66d705778a9ef4e9496da9.ctex"]
 
 [params]
 
