@@ -28,6 +28,7 @@ project/assembly_name="pm-escape"
 [global_group]
 
 Enemy=""
+Player=""
 
 [input]
 

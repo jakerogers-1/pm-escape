@@ -14,10 +14,8 @@ var rng = RandomNumberGenerator.new()
 
 @export var health: int = 3
 
-
 func _ready() -> void:
 	navigation_agent.velocity_computed.connect(_on_velocity_computed)
-
 
 func set_movement_target(movement_target: Vector2) -> void:
 	navigation_agent.set_target_position(movement_target)
@@ -33,7 +31,14 @@ func damage(amount: int, player_pos: Vector2) -> void:
 	var randomKnock = rng.randf() * 50 - 25
 	knockback_velocity = knockback_direction * max(knockback_strength + randomKnock, 0)
 	is_being_knocked_back = true
-
+	
+	var tween = create_tween()
+	tween.tween_property(self, "modulate", Color(0.5, 0.5, 0.5, 1.0), 0.05)
+	tween.tween_property(self, "modulate", Color(1, 1, 1, 1.0), 0.35)
+	
+	if health <= 0:
+		$Timer.start()
+		tween.tween_property(self, "scale", Vector2(0,0), 0.3)
 
 func _physics_process(delta: float) -> void:
 	# Knockback temporarily takes control of movement.
@@ -50,7 +55,11 @@ func _physics_process(delta: float) -> void:
 		if knockback_velocity.length() < 5.0:
 			knockback_velocity = Vector2.ZERO
 			is_being_knocked_back = false
+			
+		$Animation.play("idle")
 
+		return
+	if health <= 0:
 		return
 
 	# Wait until the navigation map is ready.
@@ -65,6 +74,8 @@ func _physics_process(delta: float) -> void:
 		return
 
 	movement_delta = movement_speed * delta
+	
+	$Animation.play("walk")
 
 	var next_path_position := navigation_agent.get_next_path_position()
 	var desired_velocity := global_position.direction_to(next_path_position) * movement_speed
@@ -75,8 +86,23 @@ func _physics_process(delta: float) -> void:
 		_on_velocity_computed(desired_velocity)
 
 	look_at(navigation_agent.target_position)
+	
+func _process(delta: float) -> void:
+	if health <= 0:
+		return
+	if $ShapeCast2D.is_colliding():
+		var collision_count = $ShapeCast2D.get_collision_count()
+		for i in range(collision_count):
+			var collider = $ShapeCast2D.get_collider(i)
+			if collider != null:
+				if collider.is_in_group("Player"):
+					collider.take_damage()
 
 
 func _on_velocity_computed(safe_velocity: Vector2) -> void:
 	velocity = safe_velocity
 	move_and_slide()
+
+
+func _on_timer_timeout() -> void:
+	queue_free()

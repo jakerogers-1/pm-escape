@@ -1,23 +1,68 @@
 [gd_scene format=3 uid="uid://ds5ojxjv4sjig"]
 
 [ext_resource type="Script" uid="uid://cwpg70u7ixo4h" path="res://enemy.gd" id="1_s7bn3"]
-[ext_resource type="Texture2D" uid="uid://bmdmmtp8m0qjt" path="res://kenney_top-down-shooter/PNG/Man Blue/manBlue_stand.png" id="1_tt7e2"]
+[ext_resource type="Texture2D" uid="uid://cyepbl05vuwvi" path="res://assets/Spritesheet/CurrentPlayer.png" id="2_s7bn3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hac7"]
+atlas = ExtResource("2_s7bn3")
+region = Rect2(0, 45, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6d4v"]
+atlas = ExtResource("2_s7bn3")
+region = Rect2(32, 45, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp131"]
+atlas = ExtResource("2_s7bn3")
+region = Rect2(0, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6do27"]
+atlas = ExtResource("2_s7bn3")
+region = Rect2(32, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvmyp"]
+atlas = ExtResource("2_s7bn3")
+region = Rect2(64, 0, 32, 45)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydvyy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tt7e2")
+"texture": SubResource("AtlasTexture_2hac7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6d4v")
 }],
 "loop": 1,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp131")
+}],
+"loop": 2,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6do27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvmyp")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydvyy"]
 size = Vector2(16, 20)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ydvyy"]
+
 [node name="Enemy" type="CharacterBody2D" unique_id=1880207505 groups=["Enemy"]]
+z_index = 1
 collision_layer = 9
 collision_mask = 6
 motion_mode = 1
@@ -30,10 +75,23 @@ path_max_distance = 32.0
 path_postprocessing = 1
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=755319706]
+z_index = 1
 texture_filter = 1
+position = Vector2(5.94, 0)
+rotation = -1.5707964
 sprite_frames = SubResource("SpriteFrames_ydvyy")
-animation = &"idle"
+animation = &"walk"
+frame_progress = 0.35633788
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831621914 groups=["Enemy"]]
 position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_ydvyy")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=1418964012]
+shape = SubResource("CircleShape2D_ydvyy")
+target_position = Vector2(6.255, 0)
+collision_mask = 8
+
+[node name="Timer" type="Timer" parent="." unique_id=1794482573]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

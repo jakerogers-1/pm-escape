@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvlo88li18alh"
-path="res://.godot/imported/soldier1_machine.png-1a62f5bb2b4b14a7bcc53f2ab069e853.ctex"
+path="res://.godot/imported/soldier1_machine.png-073eed9ac6794ac08e94ec8e91aa6a4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PNG/Soldier 1/soldier1_machine.png"
-dest_files=["res://.godot/imported/soldier1_machine.png-1a62f5bb2b4b14a7bcc53f2ab069e853.ctex"]
+source_file="res://assets/Pictures/Soldier/soldier1_machine.png"
+dest_files=["res://.godot/imported/soldier1_machine.png-073eed9ac6794ac08e94ec8e91aa6a4c.ctex"]
 
 [params]
 

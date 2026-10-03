@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bftrxumuxpt0"
-path="res://.godot/imported/hitman1_reload.png-24d3caa6881dfc9b5c4d0d8e9f913be5.ctex"
+path="res://.godot/imported/hitman1_reload.png-ceda7904289653afcca8c849a9a49513.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PNG/Hitman 1/hitman1_reload.png"
-dest_files=["res://.godot/imported/hitman1_reload.png-24d3caa6881dfc9b5c4d0d8e9f913be5.ctex"]
+source_file="res://assets/Pictures/Hitman/hitman1_reload.png"
+dest_files=["res://.godot/imported/hitman1_reload.png-ceda7904289653afcca8c849a9a49513.ctex"]
 
 [params]
 

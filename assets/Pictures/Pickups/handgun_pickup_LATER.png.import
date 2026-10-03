@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csba51hdjrxno"
-path="res://.godot/imported/walking.png-aa3e68666e1985af4b752f32bfd9e117.ctex"
+uid="uid://cs7aq0enmvnqu"
+path="res://.godot/imported/handgun_pickup_LATER.png-f854d5e0160b5dc2dfbca686574c1620.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/walking.png"
-dest_files=["res://.godot/imported/walking.png-aa3e68666e1985af4b752f32bfd9e117.ctex"]
+source_file="res://assets/Pictures/Pickups/handgun_pickup_LATER.png"
+dest_files=["res://.godot/imported/handgun_pickup_LATER.png-f854d5e0160b5dc2dfbca686574c1620.ctex"]
 
 [params]
 

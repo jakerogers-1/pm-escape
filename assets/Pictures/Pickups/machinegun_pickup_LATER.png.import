@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://batp6d5cxuar1"
-path="res://.godot/imported/DraftPlayer.png-a29f7cb9273b8c92d1bb58cb467a59e6.ctex"
+uid="uid://cim0a2i2nmsa1"
+path="res://.godot/imported/machinegun_pickup_LATER.png-22a93b9bb4fb8256cbe9cdc6a28fc4ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/DraftPlayer.png"
-dest_files=["res://.godot/imported/DraftPlayer.png-a29f7cb9273b8c92d1bb58cb467a59e6.ctex"]
+source_file="res://assets/Pictures/Pickups/machinegun_pickup_LATER.png"
+dest_files=["res://.godot/imported/machinegun_pickup_LATER.png-22a93b9bb4fb8256cbe9cdc6a28fc4ce.ctex"]
 
 [params]
 
