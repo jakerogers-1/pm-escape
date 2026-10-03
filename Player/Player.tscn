@@ -58,3 +58,7 @@ texture = ExtResource("2_ddoul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=946899096]
 shape = SubResource("RectangleShape2D_epypp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=368028478]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
