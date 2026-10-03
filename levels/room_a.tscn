@@ -1,0 +1,28 @@
+[gd_scene format=4 uid="uid://cloeklnrm7xkr"]
+
+[ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_ftkcf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
+size = Vector2(32, 32)
+
+[node name="Room_a" type="Node2D" unique_id=358869070]
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=49936108]
+tile_map_data = PackedByteArray("AAD//wMAAQAAAAAAAAAAAPz/AQAAAAAAAAABAPz/AQAAAAAAAAD+//3/AQAAAAAAAAD+//7/AQAAAAAAAAD+////AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD+/wIAAQAAAAAAAAD///3/AQAAAAAAAAD///7/AQAAAAAAAAD/////AQAAAAAAAAD//wAAAQAAAAAAAAD//wEAAQAAAAAAAAD//wIAAQAAAAAAAAAAAP3/AQAAAAAAAAAAAP7/AQAAAAAAAAAAAP//AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAABAP3/AQAAAAAAAAABAP7/AQAAAAAAAAABAP//AQAAAAAAAAABAAAAAQAAAAAAAAABAAEAAQAAAAAAAAABAAIAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wMAAQAAAAAAAAABAPv/AQAAAAAAAAA=")
+tile_set = ExtResource("1_ftkcf")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=433466939]
+tile_map_data = PackedByteArray("AAACAPv/AQADAAIAAAACAPz/AQABAAIAAAACAP3/AQABAAIAAAACAP7/AQABAAIAAAACAP//AQABAAIAAAACAAAAAQABAAIAAAACAAEAAQABAAIAAAACAAIAAQABAAIAAAACAAMAAQABAAMAAAAAAAMAAQAAAAIAAAABAAMAAQAAAAIAAAD//wQAAQABAAMAAAD9/wQAAQAAAAMAAAD9//3/AQAEAAEAAAD9//7/AQAEAAEAAAD9////AQAEAAEAAAD9/wAAAQAEAAEAAAD9/wEAAQAEAAEAAAD9/wIAAQAEAAEAAAD9/wMAAQAEAAEAAAD9//z/AQAEAAIAAAD+//z/AQACAAIAAAD///z/AQACAAIAAAAAAPv/AQAEAAIAAAA=")
+tile_set = ExtResource("1_ftkcf")
+
+[node name="DoorLower" type="StaticBody2D" parent="." unique_id=1113220912]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=1101686346]
+position = Vector2(-48, 144)
+shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="DoorUpper" type="StaticBody2D" parent="." unique_id=551301914]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=796788569]
+position = Vector2(48, -144)
+shape = SubResource("RectangleShape2D_6w6ra")

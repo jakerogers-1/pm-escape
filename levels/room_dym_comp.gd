@@ -1,12 +1,7 @@
 extends Node2D
 
-enum DoorType { LEFT, RIGHT, UPPER, LOWER }
-
-var room_a_scene = preload("res://levels/room_dym_a.tscn") 
-var room_b_scene = preload("res://levels/room_dym_b.tscn")
-var room_c_scene = preload("res://levels/room_dym_c.tscn")
-var room_d_scene = preload("res://levels/room_dym_d.tscn")
-var room_e_scene = preload("res://levels/room_dym_e.tscn")
+var room_a_scene = preload("res://levels/room_a.tscn") 
+var room_b_scene = preload("res://levels/room_b.tscn")
 
 var player_scene = preload("res://Player/Player.tscn")
 
@@ -16,7 +11,7 @@ func _ready() -> void:
 	# Add randomization code for initial room
 	# ...
 	
-	var room_names = ['a', 'b', 'c']
+	var room_names = ['a', 'b']
 	var room_nums = 4
 
 	var room_data = []
@@ -35,12 +30,7 @@ func _ready() -> void:
 			room_data.append(room_a_scene.instantiate())
 		elif room_let == "b":
 			room_data.append(room_b_scene.instantiate())
-		elif room_let == "c":
-			room_data.append(room_c_scene.instantiate())
-		elif room_let == "d":
-			room_data.append(room_d_scene.instantiate())
-		elif room_let == "e":
-			room_data.append(room_e_scene.instantiate())
+
 
 	# Put every room inside the container.
 	for room in room_data:
@@ -54,46 +44,37 @@ func _ready() -> void:
 		var previous_doors = get_doors(room_data[index - 1])
 		var current_doors = get_doors(room_data[index])
 
-		if previous_doors.is_empty() or current_doors.is_empty():
+		var previous_door = previous_doors["upper"]
+		var current_door = current_doors["lower"]
+
+		if previous_door == null or current_door == null:
 			push_error("Missing upper or lower door collision shape.")
 			return
-
-		var previous_door = previous_doors[1]
-		var current_door = current_doors[0]
 
 		room_data[index].global_position += (
 			previous_door.global_position
 			- current_door.global_position
-			+ Vector2(0, 64.0)
+			- Vector2(0, 32.0)
 		)
 			
 	# Spawn player
 	var player = player_scene.instantiate()
 	add_child(player)
-	player.global_position = get_doors(room_data[0])[0].global_position
+	player.global_position = get_doors(room_data[0])["lower"].global_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 	
-func get_doors(room: Node) -> Array:
-	var upper: CollisionShape2D = null
-	var lower: CollisionShape2D = null
+func get_doors(room: Node) -> Dictionary:
+	var doors_dict = { "upper" : null, "lower" : null }
 
-	for child in room.find_children("Door*", "Marker2D", true, false):
-		var shapes = child.find_children(
-			"*", "CollisionShape2D", true, false
-		)
-
-		if shapes.is_empty():
-			continue
+	for child in room.find_children("Door*", "StaticBody2D", true, false):
 
 		if String(child.name).begins_with("DoorUpper"):
-			upper = shapes[0]
+			doors_dict["upper"] = child.get_child(0)
 		elif String(child.name).begins_with("DoorLower"):
-			lower = shapes[0]
+			doors_dict["lower"] = child.get_child(0)
 
-	if upper == null or lower == null:
-		return []
 
-	return [upper, lower]
+	return doors_dict
