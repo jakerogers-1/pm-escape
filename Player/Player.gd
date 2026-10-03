@@ -12,7 +12,7 @@ func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	
 func _process(delta: float) -> void:
-	var velocity = Vector2.ZERO # The player's movement vector.
+	velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
@@ -35,9 +35,8 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.play("stop")
 		
 	#delta = frame length
-	move_and_collide(velocity * delta)
-	#position += velocity * delta
-	#position = position.clamp(Vector2.ZERO, screen_size)
+	move_and_slide()
+
 	look_at(get_global_mouse_position())
 
 func attack() -> void:
