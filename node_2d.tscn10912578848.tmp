@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cf78mdoun6yfq"]
+
+[ext_resource type="Script" uid="uid://bie1e45iax3gm" path="res://node_2d.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://dyil881mrgysk" path="res://walking.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://csv8mpwt4fclt" path="res://New Piskel (7).png" id="3_0hol4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("2_epypp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("2_epypp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epypp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="Area2D" unique_id=648669737]
+texture_filter = 1
+script = ExtResource("1_wtcfe")
+speed = 454
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=946899096]
+shape = SubResource("RectangleShape2D_epypp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514569922]
+rotation = -1.5707964
+scale = Vector2(3.23, 3.23)
+sprite_frames = SubResource("SpriteFrames_epypp")
+animation = &"walk"
+frame_progress = 0.21187456
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1259718866]
+visible = false
+rotation = -1.5707964
+scale = Vector2(3.23, 3.23)
+texture = ExtResource("3_0hol4")
