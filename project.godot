@@ -25,6 +25,10 @@ window/stretch/aspect="expand"
 project/assembly_name="pm-escape"
 <<<<<<<Updatedupstreamproject/assembly_name="TestProject"
 
+[global_group]
+
+Enemy=""
+
 [input]
 
 move_right={

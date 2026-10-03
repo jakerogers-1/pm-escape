@@ -1,12 +1,66 @@
 [gd_scene format=3 uid="uid://c1ffq51ylqv56"]
 
+[ext_resource type="Script" uid="uid://bxnxx78lle7nd" path="res://levels/Game.gd" id="1_ijkj0"]
 [ext_resource type="PackedScene" uid="uid://d06mx4osc04p1" path="res://levels/room_1.tscn" id="1_srajl"]
 [ext_resource type="PackedScene" uid="uid://cf78mdoun6yfq" path="res://Player/Player.tscn" id="2_oegl2"]
+[ext_resource type="PackedScene" uid="uid://ds5ojxjv4sjig" path="res://Enemy.tscn" id="3_oegl2"]
 
-[node name="SampleLevel" type="Node2D" unique_id=217283834]
+[node name="SampleLevel" type="Node2D" unique_id=217283834 node_paths=PackedStringArray("enemies")]
 position = Vector2(0, 1)
+script = ExtResource("1_ijkj0")
+enemies = [NodePath("Enemy"), NodePath("Enemy2"), NodePath("Enemy3"), NodePath("Enemy4"), NodePath("Enemy5"), NodePath("Enemy6"), NodePath("Enemy7"), NodePath("Enemy8"), NodePath("Enemy9"), NodePath("Enemy10")]
 
 [node name="Room1" parent="." unique_id=358869070 instance=ExtResource("1_srajl")]
 
 [node name="Player" parent="." unique_id=648669737 instance=ExtResource("2_oegl2")]
-position = Vector2(155, 36)
+position = Vector2(209, 150)
+
+[node name="Enemy" parent="." unique_id=1880207505 instance=ExtResource("3_oegl2")]
+position = Vector2(510, 528)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
+
+[node name="Enemy2" parent="." unique_id=269274 instance=ExtResource("3_oegl2")]
+position = Vector2(510, 528)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
+
+[node name="Enemy3" parent="." unique_id=688223969 instance=ExtResource("3_oegl2")]
+position = Vector2(486.00003, 374.00006)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
+
+[node name="Enemy4" parent="." unique_id=1070979687 instance=ExtResource("3_oegl2")]
+position = Vector2(565, 263.00006)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
+
+[node name="Enemy5" parent="." unique_id=1130790855 instance=ExtResource("3_oegl2")]
+position = Vector2(511.00003, 233.00006)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
+
+[node name="Enemy6" parent="." unique_id=648411038 instance=ExtResource("3_oegl2")]
+position = Vector2(541, 622.00006)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
+
+[node name="Enemy7" parent="." unique_id=1770611456 instance=ExtResource("3_oegl2")]
+position = Vector2(395.00003, 607.00006)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
+
+[node name="Enemy8" parent="." unique_id=383510347 instance=ExtResource("3_oegl2")]
+position = Vector2(272.00003, 599.00006)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
+
+[node name="Enemy9" parent="." unique_id=11986032 instance=ExtResource("3_oegl2")]
+position = Vector2(571, 530.00006)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
+
+[node name="Enemy10" parent="." unique_id=1667253645 instance=ExtResource("3_oegl2")]
+position = Vector2(541, 386.00006)
+scale = Vector2(1.48, 1.48)
+movement_speed = 100.0
