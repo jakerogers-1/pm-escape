@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cw2iifi5l2u0g"]
+
+[ext_resource type="PackedScene" uid="uid://xpcovci5djfs" path="res://levels/room_2.tscn" id="1_lc8j3"]
+[ext_resource type="PackedScene" uid="uid://cf78mdoun6yfq" path="res://Player/Player.tscn" id="1_r344p"]
+
+[node name="SampleLevel2" type="Node2D" unique_id=682287240]
+position = Vector2(-4, 110)
+
+[node name="Room2" parent="." unique_id=1520529923 instance=ExtResource("1_lc8j3")]
+position = Vector2(67, 83)
+
+[node name="Player" parent="." unique_id=648669737 instance=ExtResource("1_r344p")]
+position = Vector2(155, 36)
