@@ -1,5 +1,17 @@
 # ANU CSSA Game Jam
 
+## TO DO SUNDAY
+ESSENTIAL
+- Make rooms
+- Add/and or make custom people sprites for enemies
+- Win area/outside (probably just a fixed final room that's big and looks like outside?)
+- Enemy, hazard and throwable spawning
+- Sound effects
+
+OPTIONAL BUT WOULD BE GOOD
+- Start animation/visual of parliament house
+- Music
+
 
 ### Core mechanic
 **The Aussie PM is escaping parliament house… THE PEOPLE HAVE REVOLTED!**
