@@ -45,7 +45,6 @@
 * Ending still is determined based on performance
 
 
-
 **Resources**
 * Sound effects: jsfxr - 8 bit sound maker and online sfx generator
 * Art: https://www.piskelapp.com/
