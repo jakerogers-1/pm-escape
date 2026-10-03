@@ -68,6 +68,10 @@ func _ready() -> void:
 
 	enemies = get_tree().get_nodes_in_group("EnemyAgent")
 	
+	var spawners = get_tree().get_nodes_in_group("Spawner")
+	for spawner in spawners:
+		spawner.spawn()
+	
 	# Setup navigation mesh - didn't seem to be working
 	#var new_navigation_mesh = NavigationPolygon.new()
 	#var maxY = room_data[room_data.size() - 1].global_position.y + 100
