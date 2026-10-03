@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n8x3rrd7d1ii"
-path="res://.godot/imported/tilesheet_complete_2X.png-7db7662c13af12b48fb408185fb308a6.ctex"
+uid="uid://dbcom14xpsmlq"
+path="res://.godot/imported/spritesheet_carpet_and_walls.png-f80f5e551d9939ddd10743fbfcd72b7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tilesheet/tilesheet_complete_2X.png"
-dest_files=["res://.godot/imported/tilesheet_complete_2X.png-7db7662c13af12b48fb408185fb308a6.ctex"]
+source_file="res://kenney_top-down-shooter/Spritesheet/spritesheet_carpet_and_walls.png"
+dest_files=["res://.godot/imported/spritesheet_carpet_and_walls.png-f80f5e551d9939ddd10743fbfcd72b7c.ctex"]
 
 [params]
 
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
