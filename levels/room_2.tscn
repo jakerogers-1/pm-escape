@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene format=4 uid="uid://xpcovci5djfs"]
+=======
+[gd_scene format=4 uid="uid://c0lougalsywtc"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://b6op6wqtpq35" path="res://kenney_top-down-shooter/Tilesheet/tilesheet_complete.png" id="1_hlhp6"]
 

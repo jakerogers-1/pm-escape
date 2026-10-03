@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://cw2iifi5l2u0g"]
 
 [ext_resource type="PackedScene" uid="uid://xpcovci5djfs" path="res://levels/room_2.tscn" id="1_lc8j3"]
+=======
+[gd_scene format=3 uid="uid://c0k8o3ss4nnke"]
+
+[ext_resource type="PackedScene" uid="uid://c0lougalsywtc" path="res://levels/room_2.tscn" id="1_lc8j3"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://cf78mdoun6yfq" path="res://Player/Player.tscn" id="1_r344p"]
 
 [node name="SampleLevel2" type="Node2D" unique_id=682287240]
