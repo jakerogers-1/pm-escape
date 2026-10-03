@@ -17,8 +17,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydvyy"]
 size = Vector2(16, 20)
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1880207505]
-collision_layer = 6
+[node name="Enemy" type="CharacterBody2D" unique_id=1880207505 groups=["Enemy"]]
+collision_layer = 9
 collision_mask = 6
 motion_mode = 1
 platform_wall_layers = 6
@@ -34,6 +34,6 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ydvyy")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831621914]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831621914 groups=["Enemy"]]
 position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_ydvyy")

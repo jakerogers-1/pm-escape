@@ -41,6 +41,12 @@ func attack() -> void:
 	else: 
 		$AnimatedSprite2D.play("punch2")
 		rightHand = true
+	if $ShapeCast2D.is_colliding():
+		var collision_count = $ShapeCast2D.get_collision_count()
+		for i in range(collision_count):
+			var collider = $ShapeCast2D.get_collider(i)
+			if collider.is_in_group("Enemy"):
+				collider.damage(10, position)
 	attacking = true
 
 func _on_animated_sprite_2d_animation_finished() -> void:
