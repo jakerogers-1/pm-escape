@@ -1096,8 +1096,8 @@ shape = SubResource("RectangleShape2D_54a8l")
 
 [node name="DoorLower1" type="Marker2D" parent="Door" unique_id=229906210]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Door" unique_id=583097164]
+[node name="StaticBody2D" type="StaticBody2D" parent="Door/DoorLower1" unique_id=583097164]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/StaticBody2D" unique_id=787398737]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/DoorLower1/StaticBody2D" unique_id=787398737]
 position = Vector2(160, 672)
 shape = SubResource("RectangleShape2D_54a8l")
