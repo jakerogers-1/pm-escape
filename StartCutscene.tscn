@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c6dvg2rkmfvqd"]
+
+[ext_resource type="Script" uid="uid://ddsgof0ryo26q" path="res://start_cutscene.gd" id="1_4k1er"]
+[ext_resource type="Texture2D" uid="uid://ba4drtyjirm55" path="res://assets/Pictures/Start Screen Images/Parliament_House.png" id="2_damlb"]
+
+[node name="StartCutscene" type="Node2D" unique_id=1974844406]
+script = ExtResource("1_4k1er")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=65475985]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1916358825]
+texture = ExtResource("2_damlb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1497261956]

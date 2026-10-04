@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://uo7yj83roq5u"]
+
+[ext_resource type="Script" uid="uid://ccdaphtdg4mi2" path="res://Newspaper.gd" id="1_k15i2"]
+[ext_resource type="Texture2D" uid="uid://chse5cn51b0py" path="res://assets/Pictures/Start Screen Images/Articles.png" id="2_k15i2"]
+
+[node name="Newspaper" type="Node2D" unique_id=1974844406]
+script = ExtResource("1_k15i2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=65475985]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1916358825]
+texture = ExtResource("2_k15i2")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=172553648]
