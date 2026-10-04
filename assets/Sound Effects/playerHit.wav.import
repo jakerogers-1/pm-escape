@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmjej8q40ghu1"
+path="res://.godot/imported/playerHit.wav-1f8b8a88a1d709fb3a6b57d1f45ef9dc.sample"
+
+[deps]
+
+source_file="res://assets/Sound Effects/playerHit.wav"
+dest_files=["res://.godot/imported/playerHit.wav-1f8b8a88a1d709fb3a6b57d1f45ef9dc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

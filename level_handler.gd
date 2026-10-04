@@ -47,4 +47,6 @@ func _on_level_2_finished() -> void:
 	
 	victory = victory_scene.instantiate()
 	add_child(victory)	
+	
+	$AudioStreamPlayer2D.play()
 	print("HOORAY YOU WON")
