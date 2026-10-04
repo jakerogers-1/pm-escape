@@ -1,31 +1,28 @@
 extends Node2D
 
-var room_a_scene = preload("res://levels/room_a.tscn") 
-var room_b_scene = preload("res://levels/room_test.tscn")
+signal level1_finished()
+var level_finished: bool = false
+
+var room_a_scene = preload("res://levels/room_1a.tscn") 
+var room_b_scene = preload("res://levels/room_1b.tscn")
+#var room_c_scene = preload("res://levels/room_0c.tscn")
 
 var player_scene = preload("res://Player/Player.tscn")
+var room_names = ['a', 'b',]
+var num_rooms = 2
+var room_data = []
 
-var enemies : Array[Node] = [] 
-
-var player
+var player: Node2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-
-	# Add randomization code for initial room
-	# ...
-	
-	var room_names = ['a', 'b']
-	var room_nums = 10
-
-	var room_data = []
-
+	print("LEVEL 1 LOADED")
 	var room_group = Node2D.new()
-	room_group.name = "GeneratedRooms"
+	room_group.name = "GeneratedRoomsLevel1"
 
 	# Instantiate the rooms.
 	# Assumes room_names is nonempty and contains only "a" and "b".
-	for count in range(room_nums):
+	for count in range(num_rooms):
 		var room_let = room_names[
 			randi_range(0, room_names.size() - 1)
 		]		
@@ -34,6 +31,7 @@ func _ready() -> void:
 			room_data.append(room_a_scene.instantiate())
 		elif room_let == "b":
 			room_data.append(room_b_scene.instantiate())
+
 
 
 	# Put every room inside the container.
@@ -61,44 +59,29 @@ func _ready() -> void:
 			- Vector2(0, 32.0)
 		)
 			
+	
 	# Spawn player
 	player = player_scene.instantiate()
 	add_child(player)
 	player.global_position = get_doors(room_data[0])["lower"].global_position
 
-	var spawners = get_tree().get_nodes_in_group("Spawner")
-	for spawner in spawners:
-		print(
-		"Spawner: ",
-		spawner.get_path(),
-		" parent: ",
-		spawner.get_parent().name
-		)
-		spawner.spawn()
+# Called every frame. 'delta' is the elapsed time swince the previous frame.
+func _process(_delta: float) -> void:
+	if level_finished or not is_instance_valid(player):
+		return
 
-	enemies = get_tree().get_nodes_in_group("EnemyAgent")
+	if room_data.is_empty():
+		return
 
-	
-	# Setup navigation mesh - didn't seem to be working
-	#var new_navigation_mesh = NavigationPolygon.new()
-	#var maxY = room_data[room_data.size() - 1].global_position.y + 100
-	#var bounding_outline = PackedVector2Array([Vector2(0, 0), Vector2(0, maxY), Vector2(50, maxY), Vector2(50, 0)])
-	#new_navigation_mesh.add_outline(bounding_outline)
-	#var mesh_source = NavigationMeshSourceGeometryData2D.new()
-	#mesh_source.add_traversable_outline(bounding_outline)
-	#NavigationServer2D.bake_from_source_geometry_data_async(new_navigation_mesh, mesh_source, Call_Bake)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	updateEnemies(enemies)
-	
-	if Input.is_action_just_pressed("restart"):
-		get_tree().reload_current_scene()
-	
-func updateEnemies(enems) -> void:
-	for enemy in enems:
-		if enemy != null:
-			enemy.set_movement_target(player.global_position)
-	
+	var final_door = get_doors(room_data[-1])["upper"]
+
+	if final_door == null:
+		return
+
+	if player.global_position.distance_to(final_door.global_position) <= 17.0:
+		level_finished = true
+		print("LEVEL FINISHED")
+		level1_finished.emit()
 func get_doors(room: Node) -> Dictionary:
 	var doors_dict = { "upper" : null, "lower" : null }
 
@@ -111,6 +94,3 @@ func get_doors(room: Node) -> Dictionary:
 
 
 	return doors_dict
-	
-#func Call_Bake() -> void:
-	#bake_navigation_polygon(true)

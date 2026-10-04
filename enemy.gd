@@ -51,6 +51,9 @@ func damage(amount: int, player_pos: Vector2) -> void:
 
 func _physics_process(delta: float) -> void:
 	# Knockback temporarily takes control of movement.
+	if (navigation_agent.target_position - global_position).length() > 1000:
+		return
+	
 	if is_being_knocked_back:
 		velocity = knockback_velocity
 		move_and_slide()

@@ -1,15 +1,12 @@
 [gd_scene format=4 uid="uid://cloeklnrm7xkr"]
 
 [ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_ftkcf"]
-[ext_resource type="PackedScene" uid="uid://ds5ojxjv4sjig" path="res://Enemy.tscn" id="2_7xk2d"]
-[ext_resource type="PackedScene" uid="uid://c4ext656676x1" path="res://Hazard.tscn" id="3_hyh1d"]
+[ext_resource type="PackedScene" uid="uid://dv2n4bteu2ii4" path="res://Spawner.tscn" id="4_7xk2d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
 size = Vector2(32, 32)
 
 [node name="Room_a" type="Node2D" unique_id=358869070]
-
-[node name="Enemy" parent="." unique_id=1880207505 instance=ExtResource("2_7xk2d")]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=49936108]
 texture_filter = 1
@@ -33,20 +30,22 @@ shape = SubResource("RectangleShape2D_6w6ra")
 position = Vector2(48, -144)
 shape = SubResource("RectangleShape2D_6w6ra")
 
-[node name="Hazard" parent="." unique_id=1476280909 instance=ExtResource("3_hyh1d")]
-position = Vector2(49, -42)
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1966623397]
 
-[node name="Enemy2" parent="." unique_id=1709005417 instance=ExtResource("2_7xk2d")]
-position = Vector2(-2, 83)
+[node name="Node2D" parent="SpawnPoints" unique_id=917419577 instance=ExtResource("4_7xk2d")]
+position = Vector2(-60, 8)
 
-[node name="Enemy3" parent="." unique_id=158731943 instance=ExtResource("2_7xk2d")]
-position = Vector2(-42, 52)
+[node name="Node2D2" parent="SpawnPoints" unique_id=761029545 instance=ExtResource("4_7xk2d")]
+position = Vector2(45, -91)
 
-[node name="Enemy4" parent="." unique_id=969053352 instance=ExtResource("2_7xk2d")]
-position = Vector2(43, 53)
+[node name="Node2D3" parent="SpawnPoints" unique_id=312001655 instance=ExtResource("4_7xk2d")]
+position = Vector2(-46, -97)
 
-[node name="Enemy5" parent="." unique_id=1266066198 instance=ExtResource("2_7xk2d")]
-position = Vector2(10, -71)
+[node name="Node2D4" parent="SpawnPoints" unique_id=1156401762 instance=ExtResource("4_7xk2d")]
+position = Vector2(50, 25)
 
-[node name="Enemy6" parent="." unique_id=160084788 instance=ExtResource("2_7xk2d")]
-position = Vector2(-44, -51)
+[node name="Node2D5" parent="SpawnPoints" unique_id=324500992 instance=ExtResource("4_7xk2d")]
+position = Vector2(-61, 93)
+
+[node name="Node2D6" parent="SpawnPoints" unique_id=1550302831 instance=ExtResource("4_7xk2d")]
+position = Vector2(19, 74)
