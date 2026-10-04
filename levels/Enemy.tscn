@@ -1,13 +1,12 @@
-[gd_scene format=3 uid="uid://fl5577uuo3io"]
+[gd_scene format=3 uid="uid://dsndlmac1p7i"]
 
 [ext_resource type="Script" uid="uid://cwpg70u7ixo4h" path="res://enemy.gd" id="1_s7bn3"]
-[ext_resource type="Texture2D" uid="uid://bmdmmtp8m0qjt" path="res://kenney_top-down-shooter/PNG/Man Blue/manBlue_stand.png" id="1_tt7e2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydvyy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tt7e2")
+"texture": null
 }],
 "loop": 1,
 "name": &"idle",

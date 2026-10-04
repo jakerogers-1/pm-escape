@@ -12,15 +12,16 @@ var rng = RandomNumberGenerator.new()
 
 func spawn():
 	rng.randomize()
-	if rng.randf() < enemyChance:
+	var num = rng.randf()
+	if num <= enemyChance:
 		var enemy = enemy_scene.instantiate()
 		add_child(enemy)
 		return
-	elif rng.randf() < enemyChance + throwableChance:
+	elif num <= enemyChance + throwableChance:
 		var throwable = throwable_scene.instantiate()
 		add_child(throwable)
 		return
-	elif rng.randf() < enemyChance + throwableChance + hazardChance:
+	elif num <= enemyChance + throwableChance + hazardChance:
 		var hazard = hazard_scene.instantiate()
 		add_child(hazard)
 		return

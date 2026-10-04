@@ -66,11 +66,12 @@ func _ready() -> void:
 	add_child(player)
 	player.global_position = get_doors(room_data[0])["lower"].global_position
 
-	enemies = get_tree().get_nodes_in_group("EnemyAgent")
-	
 	var spawners = get_tree().get_nodes_in_group("Spawner")
 	for spawner in spawners:
 		spawner.spawn()
+
+	enemies = get_tree().get_nodes_in_group("EnemyAgent")
+
 	
 	# Setup navigation mesh - didn't seem to be working
 	#var new_navigation_mesh = NavigationPolygon.new()

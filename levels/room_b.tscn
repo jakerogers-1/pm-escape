@@ -1,8 +1,7 @@
 [gd_scene format=4 uid="uid://1ef866d1q7ig"]
 
 [ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_r4wui"]
-[ext_resource type="PackedScene" uid="uid://c4ext656676x1" path="res://Hazard.tscn" id="2_uafw4"]
-[ext_resource type="PackedScene" uid="uid://btdmjjyq4ouby" path="res://Throwable.tscn" id="3_u04tq"]
+[ext_resource type="PackedScene" uid="uid://dv2n4bteu2ii4" path="res://Spawner.tscn" id="2_uafw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
 size = Vector2(32, 32)
@@ -32,8 +31,34 @@ texture_filter = 1
 position = Vector2(16, -176)
 shape = SubResource("RectangleShape2D_6w6ra")
 
-[node name="Hazard" parent="." unique_id=1476280909 instance=ExtResource("2_uafw4")]
-position = Vector2(-53, -71)
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1878603166]
 
-[node name="Throwable" parent="." unique_id=486741267 instance=ExtResource("3_u04tq")]
-position = Vector2(-74, 108)
+[node name="Spawner" parent="SpawnPoints" unique_id=917419577 instance=ExtResource("2_uafw4")]
+position = Vector2(-82, 152)
+
+[node name="Spawner2" parent="SpawnPoints" unique_id=1233154252 instance=ExtResource("2_uafw4")]
+position = Vector2(94, 121)
+
+[node name="Spawner3" parent="SpawnPoints" unique_id=2103043532 instance=ExtResource("2_uafw4")]
+position = Vector2(-98, -42)
+
+[node name="Spawner4" parent="SpawnPoints" unique_id=491184655 instance=ExtResource("2_uafw4")]
+position = Vector2(-30, -44)
+
+[node name="Spawner5" parent="SpawnPoints" unique_id=339407860 instance=ExtResource("2_uafw4")]
+position = Vector2(66, -43)
+
+[node name="Spawner6" parent="SpawnPoints" unique_id=1287138359 instance=ExtResource("2_uafw4")]
+position = Vector2(-77, -113)
+
+[node name="Spawner7" parent="SpawnPoints" unique_id=1936893559 instance=ExtResource("2_uafw4")]
+position = Vector2(20, -107)
+
+[node name="Spawner8" parent="SpawnPoints" unique_id=1592306800 instance=ExtResource("2_uafw4")]
+position = Vector2(91, -124)
+
+[node name="Spawner9" parent="SpawnPoints" unique_id=1344073794 instance=ExtResource("2_uafw4")]
+position = Vector2(-14, 107)
+
+[node name="Spawner10" parent="SpawnPoints" unique_id=1787891301 instance=ExtResource("2_uafw4")]
+position = Vector2(-112, 87)
