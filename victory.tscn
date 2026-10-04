@@ -2,8 +2,26 @@
 
 [node name="Node2D" type="Node2D" unique_id=738537405]
 
-[node name="Label" type="Label" parent="." unique_id=1546568657]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "VICTORY! YOU HAVE WON!"
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=676846328]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1546568657]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -11.5
+offset_right = 102.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.94509804, 0.5254902, 0, 0.76862746)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = -19
+theme_override_font_sizes/font_size = 62
+text = "Congratuations!
+You escaped!"
 horizontal_alignment = 1

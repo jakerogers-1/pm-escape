@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://1q8axlmi1joh"]
 
 [ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_x3e1u"]
+[ext_resource type="PackedScene" uid="uid://dv2n4bteu2ii4" path="res://Spawner.tscn" id="2_q01ed"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
 size = Vector2(32, 32)
@@ -8,7 +9,7 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4v1xc"]
 size = Vector2(32, 32)
 
-[node name="Level0a" type="Node2D" unique_id=609787715]
+[node name="Level0a2" type="Node2D" unique_id=609787715]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=2098566626]
 tile_map_data = PackedByteArray("AAD///3/BgAAAAAAAAD///7/BgAAAAAAAAD/////BgAAAAAAAAD//wAABgAAAAAAAAD//wEABgAAAAAAAAD//wIABgAAAAAAAAAAAP3/BgAAAAAAAAAAAP7/BgAAAAAAAAAAAP//BgAAAAAAAAAAAAAABgAAAAAAAAAAAAEABgAAAAAAAAAAAAIABgAAAAAAAAABAAEABgAAAAAAAAABAP3/BgAAAAAAAAABAP7/BgAAAAAAAAABAP//BgAAAAAAAAABAAAABgAAAAAAAAACAP3/BgAAAAAAAAACAP7/BgAAAAAAAAACAP//BgAAAAAAAAACAAAABgAAAAAAAAADAP3/BgAAAAAAAAADAP7/BgAAAAAAAAADAP//BgAAAAAAAAADAAAABgAAAAAAAAAEAP3/BgAAAAAAAAAEAP7/BgAAAAAAAAAEAP//BgAAAAAAAAAEAAAABgAAAAAAAAAFAP3/BgAAAAAAAAAFAP7/BgAAAAAAAAAFAP//BgAAAAAAAAAFAAAABgAAAAAAAAAGAP3/BgAAAAAAAAAGAP7/BgAAAAAAAAAGAP//BgAAAAAAAAAGAAAABgAAAAAAAAAHAP3/BgAAAAAAAAAHAP7/BgAAAAAAAAAHAP//BgAAAAAAAAAHAAAABgAAAAAAAAAHAPz/BgAAAAAAAAAIAPz/BgAAAAAAAAAJAPz/BgAAAAAAAAAIAPv/BgAAAAAAAAAJAPv/BgAAAAAAAAAIAP3/BgAAAAAAAAAIAP7/BgAAAAAAAAAIAP//BgAAAAAAAAAIAAAABgAAAAAAAAAJAP3/BgAAAAAAAAAJAP7/BgAAAAAAAAAJAP//BgAAAAAAAAAJAAAABgAAAAAAAAAKAPz/AAACAAEAAAAKAAAAAAACAAEAAAAKAAEAAAAEAAAAAAA=")
@@ -19,14 +20,31 @@ tile_map_data = PackedByteArray("AAD+/wIABQADAAAAAAABAAIABQAEAAAAAAD+//3/BQAAAAE
 tile_set = ExtResource("1_x3e1u")
 
 [node name="DoorUpper" type="StaticBody2D" parent="." unique_id=1447018471]
-position = Vector2(287, -64)
+position = Vector2(293, -53)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=565499641]
-position = Vector2(1, -80)
+position = Vector2(-5, -91)
 shape = SubResource("RectangleShape2D_6w6ra")
 
 [node name="DoorLower" type="StaticBody2D" parent="." unique_id=798035597]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=500310534]
-position = Vector2(1, 80)
+position = Vector2(0, 80)
 shape = SubResource("RectangleShape2D_4v1xc")
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=57605649]
+
+[node name="Spawner" parent="SpawnPoints" unique_id=917419577 instance=ExtResource("2_q01ed")]
+position = Vector2(12, -64)
+
+[node name="Spawner2" parent="SpawnPoints" unique_id=827400391 instance=ExtResource("2_q01ed")]
+position = Vector2(171, -74)
+
+[node name="Spawner3" parent="SpawnPoints" unique_id=1277194860 instance=ExtResource("2_q01ed")]
+position = Vector2(110, 25)
+
+[node name="Spawner5" parent="SpawnPoints" unique_id=1853797257 instance=ExtResource("2_q01ed")]
+position = Vector2(116, -24)
+
+[node name="Spawner6" parent="SpawnPoints" unique_id=1844689327 instance=ExtResource("2_q01ed")]
+position = Vector2(233, 21)

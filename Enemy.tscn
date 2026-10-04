@@ -1,37 +1,37 @@
 [gd_scene format=3 uid="uid://ds5ojxjv4sjig"]
 
 [ext_resource type="Script" uid="uid://cwpg70u7ixo4h" path="res://enemy.gd" id="1_s7bn3"]
-[ext_resource type="Texture2D" uid="uid://dobxcaxp2qv4q" path="res://assets/Spritesheet/CurrentPlayer.png" id="2_s7bn3"]
+[ext_resource type="Texture2D" uid="uid://cixenw1uen41n" path="res://assets/Spritesheet/Enemy1.png" id="2_2hac7"]
 [ext_resource type="AudioStream" uid="uid://lv0b6xq5p0hr" path="res://assets/Sound Effects/enemyHit.wav" id="3_2hac7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2hac7"]
-atlas = ExtResource("2_s7bn3")
-region = Rect2(0, 45, 32, 45)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_e6d4v"]
-atlas = ExtResource("2_s7bn3")
-region = Rect2(32, 45, 32, 45)
+atlas = ExtResource("2_2hac7")
+region = Rect2(96, 0, 32, 45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp131"]
-atlas = ExtResource("2_s7bn3")
-region = Rect2(0, 0, 32, 45)
+atlas = ExtResource("2_2hac7")
+region = Rect2(128, 0, 32, 45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6do27"]
-atlas = ExtResource("2_s7bn3")
-region = Rect2(32, 0, 32, 45)
+atlas = ExtResource("2_2hac7")
+region = Rect2(0, 0, 32, 45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvmyp"]
-atlas = ExtResource("2_s7bn3")
+atlas = ExtResource("2_2hac7")
 region = Rect2(64, 0, 32, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nxwx"]
+atlas = ExtResource("2_2hac7")
+region = Rect2(32, 0, 32, 45)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydvyy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2hac7")
+"texture": SubResource("AtlasTexture_e6d4v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e6d4v")
+"texture": SubResource("AtlasTexture_qp131")
 }],
 "loop": 1,
 "name": &"attack",
@@ -39,7 +39,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qp131")
+"texture": SubResource("AtlasTexture_6do27")
 }],
 "loop": 2,
 "name": &"idle",
@@ -47,10 +47,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6do27")
+"texture": SubResource("AtlasTexture_rvmyp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rvmyp")
+"texture": SubResource("AtlasTexture_2nxwx")
 }],
 "loop": 1,
 "name": &"walk",
@@ -81,7 +81,7 @@ texture_filter = 1
 position = Vector2(5.94, 0)
 rotation = -1.5707964
 sprite_frames = SubResource("SpriteFrames_ydvyy")
-animation = &"attack"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831621914 groups=["Enemy"]]
 shape = SubResource("RectangleShape2D_ydvyy")

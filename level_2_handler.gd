@@ -91,6 +91,7 @@ func _process(_delta: float) -> void:
 		level_finished = true
 		print("LEVEL FINISHED")
 		level2_finished.emit()
+	updateEnemies(enemies)
 func get_doors(room: Node) -> Dictionary:
 	var doors_dict = { "upper" : null, "lower" : null }
 
@@ -103,3 +104,8 @@ func get_doors(room: Node) -> Dictionary:
 
 
 	return doors_dict
+
+func updateEnemies(enems) -> void:
+	for enemy in enems:
+		if enemy != null:
+			enemy.set_movement_target(player.global_position)

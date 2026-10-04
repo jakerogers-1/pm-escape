@@ -12,6 +12,8 @@ var dead = false
 var objectHeld
 var objectOGParent
 
+@onready var label: Label = $Camera2D/CanvasLayer/Label
+
 func _ready() -> void:
 	dead = false
 	
@@ -90,6 +92,7 @@ func take_damage():
 	if !dead:
 		$Hurt.play()
 		$AnimatedSprite2D.play("death")
+		fade_in_text()
 		dead = true
 
 func _on_animated_sprite_2d_animation_finished() -> void:
@@ -98,3 +101,10 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		attack()
 	else:
 		attacking = false
+		
+func fade_in_text() -> void:
+	label.modulate.a = 0.0
+	label.visible = true
+
+	var tween := create_tween()
+	tween.tween_property(label, "modulate:a", 1.0, 2)

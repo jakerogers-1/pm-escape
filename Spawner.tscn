@@ -1,15 +1,9 @@
 [gd_scene format=3 uid="uid://dv2n4bteu2ii4"]
 
 [ext_resource type="Script" uid="uid://dwd38y8gdclax" path="res://spawner.gd" id="1_mimr8"]
-[ext_resource type="PackedScene" uid="uid://ds5ojxjv4sjig" path="res://Enemy.tscn" id="2_1v3v6"]
-[ext_resource type="PackedScene" uid="uid://btdmjjyq4ouby" path="res://Throwable.tscn" id="3_5i5hu"]
-[ext_resource type="PackedScene" uid="uid://c4ext656676x1" path="res://Hazard.tscn" id="4_lyyrg"]
 
 [node name="Spawner" type="Node2D" unique_id=917419577 groups=["Spawner"]]
 z_index = 2
 script = ExtResource("1_mimr8")
-enemyChance = 0.4
+enemyChance = 0.5
 hazardChance = 0.2
-enemy_scene = ExtResource("2_1v3v6")
-throwable_scene = ExtResource("3_5i5hu")
-hazard_scene = ExtResource("4_lyyrg")

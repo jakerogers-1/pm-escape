@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://btdmjjyq4ouby"]
 
 [ext_resource type="Script" uid="uid://ct0nw41qjr4nh" path="res://throwable.gd" id="1_1bs72"]
-[ext_resource type="Texture2D" uid="uid://dofl1qye4j3rv" path="res://assets/Pictures/Consumables/vegemite.png" id="1_hi4lh"]
+[ext_resource type="Texture2D" uid="uid://dofl1qye4j3rv" path="res://assets/Consumables/vegemite.png" id="1_hi4lh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_arcw3"]
 size = Vector2(22, 25)

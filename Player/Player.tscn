@@ -114,9 +114,16 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tok1r"]
 
+[sub_resource type="Gradient" id="Gradient_ddoul"]
+offsets = PackedFloat32Array(0, 0.2990654, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.9843137, 0.6039216, 0.23921569, 1, 0.12156863, 0.05490196, 0.003921569, 0)
+
+[sub_resource type="Theme" id="Theme_ddoul"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_1tu3e"]
 
 [node name="Player" type="CharacterBody2D" unique_id=33681183 groups=["Player"]]
+z_index = 2
 texture_filter = 1
 collision_layer = 10
 collision_mask = 2
@@ -147,6 +154,62 @@ zoom = Vector2(2.185, 2.185)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 rotation_smoothing_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=763645904]
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Camera2D" unique_id=118687199]
+z_index = -3
+amount = 100
+lifetime = 1.12
+speed_scale = 0.37
+explosiveness = 0.09
+randomness = 0.24
+lifetime_randomness = 0.02
+emission_shape = 3
+emission_rect_extents = Vector2(300, 200)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 25.0
+initial_velocity_max = 80.0
+angular_velocity_min = -85.54
+angular_velocity_max = 163.96
+scale_amount_min = 0.0
+scale_amount_max = 5.95
+color = Color(0.9372549, 0.2784314, 0, 1)
+color_ramp = SubResource("Gradient_ddoul")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=1232107776]
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer" unique_id=2133944668]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -357.0
+offset_top = -220.0
+offset_right = 357.0
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ddoul")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6745098)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 9
+theme_override_font_sizes/font_size = 34
+text = "You died :(
+
+
+
+
+
+
+Press R to restart
+Press T to watch cutscene"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=111381371 groups=["Player"]]
 z_index = 2

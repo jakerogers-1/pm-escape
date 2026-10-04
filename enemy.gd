@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var movement_speed: float = 40.0
+@export var movement_speed: float = 70.0
 @export var knockback_strength: float = 200
 @export var knockback_friction: float = 500
 
@@ -18,7 +18,7 @@ var rng = RandomNumberGenerator.new()
 func _ready() -> void:
 	navigation_agent.velocity_computed.connect(_on_velocity_computed)
 	rng.randomize()
-	var randomSpeed = rng.randf() * 20 - 10
+	var randomSpeed = rng.randf() * 20 - 30
 	movement_speed = max(movement_speed + randomSpeed, 1)
 
 func set_movement_target(movement_target: Vector2) -> void:

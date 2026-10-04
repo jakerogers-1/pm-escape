@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://fl5577uuo3io"]
 
 [ext_resource type="Script" uid="uid://cwpg70u7ixo4h" path="res://enemy.gd" id="1_s7bn3"]
-[ext_resource type="Texture2D" uid="uid://b81w5afq7ave3" path="res://assets/Pictures/Hitman/hitman1_stand.png" id="1_tt7e2"]
+[ext_resource type="Texture2D" uid="uid://b81w5afq7ave3" path="res://assets/People/Hitman/hitman1_stand.png" id="1_tt7e2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydvyy"]
 animations = [{

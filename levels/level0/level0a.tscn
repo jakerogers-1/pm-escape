@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://diwtjd1rsccqc"]
 
 [ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_75tan"]
+[ext_resource type="PackedScene" uid="uid://dv2n4bteu2ii4" path="res://Spawner.tscn" id="2_gvtey"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
 size = Vector2(32, 32)
@@ -29,3 +30,20 @@ shape = SubResource("RectangleShape2D_6w6ra")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=500310534]
 position = Vector2(0, 112)
 shape = SubResource("RectangleShape2D_4v1xc")
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1949997462]
+
+[node name="Spawner" parent="SpawnPoints" unique_id=917419577 instance=ExtResource("2_gvtey")]
+position = Vector2(-31, 56)
+
+[node name="Spawner2" parent="SpawnPoints" unique_id=627516550 instance=ExtResource("2_gvtey")]
+position = Vector2(-45, -61)
+
+[node name="Spawner3" parent="SpawnPoints" unique_id=1148908751 instance=ExtResource("2_gvtey")]
+position = Vector2(48, -63)
+
+[node name="Spawner4" parent="SpawnPoints" unique_id=427964501 instance=ExtResource("2_gvtey")]
+position = Vector2(54, 62)
+
+[node name="Spawner5" parent="SpawnPoints" unique_id=437048474 instance=ExtResource("2_gvtey")]
+position = Vector2(33, 14)
