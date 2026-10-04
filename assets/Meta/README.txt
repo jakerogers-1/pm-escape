@@ -1,1 +1,0 @@
-Contains boilerplate like in vector that should go soon

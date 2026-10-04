@@ -1,0 +1,52 @@
+[gd_scene format=4 uid="uid://bcux8d5krrmtp"]
+
+[ext_resource type="PackedScene" uid="uid://ds5ojxjv4sjig" path="res://Enemy.tscn" id="1_oq6jh"]
+[ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="2_wbexl"]
+[ext_resource type="PackedScene" uid="uid://c4ext656676x1" path="res://Hazard.tscn" id="3_s1bnx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
+size = Vector2(32, 32)
+
+[node name="Room_a" type="Node2D" unique_id=358869070]
+
+[node name="Enemy" parent="." unique_id=1880207505 instance=ExtResource("1_oq6jh")]
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=49936108]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAD//wMAAQAAAAAAAAAAAPz/AQAAAAAAAAABAPz/AQAAAAAAAAD+//3/AQAAAAAAAAD+//7/AQAAAAAAAAD+////AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD+/wIAAQAAAAAAAAD///3/AQAAAAAAAAD///7/AQAAAAAAAAD/////AQAAAAAAAAD//wAAAQAAAAAAAAD//wEAAQAAAAAAAAD//wIAAQAAAAAAAAAAAP3/AQAAAAAAAAAAAP7/AQAAAAAAAAAAAP//AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAABAP3/AQAAAAAAAAABAP7/AQAAAAAAAAABAP//AQAAAAAAAAABAAAAAQAAAAAAAAABAAEAAQAAAAAAAAABAAIAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wMAAQAAAAAAAAABAPv/AQAAAAAAAAA=")
+tile_set = ExtResource("2_wbexl")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=433466939]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAACAPv/AQADAAIAAAACAPz/AQABAAIAAAACAP3/AQABAAIAAAACAP7/AQABAAIAAAACAP//AQABAAIAAAACAAAAAQABAAIAAAACAAEAAQABAAIAAAACAAIAAQABAAIAAAACAAMAAQABAAMAAAAAAAMAAQAAAAIAAAABAAMAAQAAAAIAAAD//wQAAQABAAMAAAD9/wQAAQAAAAMAAAD9//3/AQAEAAEAAAD9//7/AQAEAAEAAAD9////AQAEAAEAAAD9/wAAAQAEAAEAAAD9/wEAAQAEAAEAAAD9/wIAAQAEAAEAAAD9/wMAAQAEAAEAAAD9//z/AQAEAAIAAAD+//z/AQACAAIAAAD///z/AQACAAIAAAAAAPv/AQAEAAIAAAA=")
+tile_set = ExtResource("2_wbexl")
+
+[node name="DoorLower" type="StaticBody2D" parent="." unique_id=1113220912]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=1101686346]
+position = Vector2(-48, 144)
+shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="DoorUpper" type="StaticBody2D" parent="." unique_id=551301914]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=796788569]
+position = Vector2(48, -144)
+shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="Hazard" parent="." unique_id=1476280909 instance=ExtResource("3_s1bnx")]
+position = Vector2(49, -42)
+
+[node name="Enemy2" parent="." unique_id=1709005417 instance=ExtResource("1_oq6jh")]
+position = Vector2(-2, 83)
+
+[node name="Enemy3" parent="." unique_id=158731943 instance=ExtResource("1_oq6jh")]
+position = Vector2(-42, 52)
+
+[node name="Enemy4" parent="." unique_id=969053352 instance=ExtResource("1_oq6jh")]
+position = Vector2(43, 53)
+
+[node name="Enemy5" parent="." unique_id=1266066198 instance=ExtResource("1_oq6jh")]
+position = Vector2(10, -71)
+
+[node name="Enemy6" parent="." unique_id=160084788 instance=ExtResource("1_oq6jh")]
+position = Vector2(-44, -51)

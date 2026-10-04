@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://8vhvtlatwike"]
+
+[ext_resource type="PackedScene" uid="uid://ds5ojxjv4sjig" path="res://Enemy.tscn" id="1_4tkaq"]
+[ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="2_0cp7c"]
+[ext_resource type="PackedScene" uid="uid://c4ext656676x1" path="res://Hazard.tscn" id="3_8cr2v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
+size = Vector2(32, 32)
+
+[node name="Room_a" type="Node2D" unique_id=358869070]
+
+[node name="Enemy" parent="." unique_id=1880207505 instance=ExtResource("1_4tkaq")]
+position = Vector2(-66, -112)
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=49936108]
+texture_filter = 1
+tile_set = ExtResource("2_0cp7c")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=433466939]
+texture_filter = 1
+tile_set = ExtResource("2_0cp7c")
+
+[node name="DoorLower" type="StaticBody2D" parent="." unique_id=1113220912]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=1101686346]
+position = Vector2(-16, 97)
+shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DoorLower" unique_id=1613307683]
+position = Vector2(16, 97)
+shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="DoorUpper" type="StaticBody2D" parent="." unique_id=551301914]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=796788569]
+position = Vector2(-16, -230)
+shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DoorUpper" unique_id=414155302]
+position = Vector2(16, -230)
+shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="Hazard" parent="." unique_id=1476280909 instance=ExtResource("3_8cr2v")]
+position = Vector2(51, -40)
+
+[node name="Hazard2" parent="." unique_id=207637335 instance=ExtResource("3_8cr2v")]
+position = Vector2(-104, -38)
+
+[node name="Hazard3" parent="." unique_id=668429430 instance=ExtResource("3_8cr2v")]
+position = Vector2(-10, -181)
+
+[node name="Enemy2" parent="." unique_id=1709005417 instance=ExtResource("1_4tkaq")]
+position = Vector2(18, -105)
+
+[node name="Enemy3" parent="." unique_id=158731943 instance=ExtResource("1_4tkaq")]
+position = Vector2(-15, -55)
