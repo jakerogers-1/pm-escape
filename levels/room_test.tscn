@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://1ef866d1q7ig"]
+[gd_scene format=4 uid="uid://c2aqtkhua7sf2"]
 
 [ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_xx6yd"]
 [ext_resource type="PackedScene" uid="uid://dv2n4bteu2ii4" path="res://Spawner.tscn" id="2_7m2hh"]
