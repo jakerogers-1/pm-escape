@@ -72,7 +72,6 @@ func check_pickup():
 			for i in range(collision_count):
 				var collider = $ShapeCast2D.get_collider(i)
 				if collider.is_in_group("Throwable") && objectHeld == null:
-					print("throwable found")
 					objectOGParent = collider.get_parent()
 					if objectOGParent != null:
 						objectOGParent.remove_child(collider)

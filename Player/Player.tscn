@@ -112,7 +112,7 @@ animations = [{
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ddoul"]
 load_path = "res://.godot/imported/player2.png-108ea6d63bb3dbbae7cb93d776f495b6.ctex"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_tok1r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1tu3e"]
 
@@ -139,7 +139,8 @@ scale = Vector2(3.23, 3.23)
 texture = SubResource("CompressedTexture2D_ddoul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=946899096]
-shape = SubResource("RectangleShape2D_epypp")
+scale = Vector2(0.77, 0.77)
+shape = SubResource("CircleShape2D_tok1r")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=368028478]
 zoom = Vector2(2.185, 2.185)

@@ -1,64 +1,46 @@
 [gd_scene format=4 uid="uid://1ef866d1q7ig"]
 
-[ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_r4wui"]
-[ext_resource type="PackedScene" uid="uid://dv2n4bteu2ii4" path="res://Spawner.tscn" id="2_uafw4"]
+[ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_xx6yd"]
+[ext_resource type="PackedScene" uid="uid://dv2n4bteu2ii4" path="res://Spawner.tscn" id="2_7m2hh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
 size = Vector2(32, 32)
 
-[node name="Room_a" type="Node2D" unique_id=358869070]
+[node name="RoomB" type="Node2D" unique_id=1238346312]
 
-[node name="Floor" type="TileMapLayer" parent="." unique_id=49936108]
+[node name="Floor" type="TileMapLayer" parent="." unique_id=915831939]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAD8//3/AQACAAMAAAD8//7/AQACAAMAAAD8////AQACAAMAAAD8/wIAAQACAAMAAAD8/wMAAQACAAMAAAD8/wQAAQACAAMAAAD9//3/AQACAAMAAAD9//7/AQACAAMAAAD9////AQACAAMAAAD9/wIAAQACAAMAAAD9/wMAAQACAAMAAAD9/wQAAQACAAMAAAD+//3/AQACAAMAAAD+//7/AQACAAMAAAD+////AQACAAMAAAD+/wIAAQACAAMAAAD+/wMAAQACAAMAAAD+/wQAAQACAAMAAAD///3/AQACAAMAAAD///7/AQACAAMAAAD/////AQACAAMAAAD//wIAAQACAAMAAAD//wMAAQACAAMAAAD//wQAAQACAAMAAAAAAP3/AQACAAMAAAAAAP7/AQACAAMAAAAAAP//AQACAAMAAAAAAAIAAQACAAMAAAAAAAMAAQACAAMAAAAAAAQAAQACAAMAAAABAP3/AQACAAMAAAABAP7/AQACAAMAAAABAP//AQACAAMAAAABAAIAAQACAAMAAAABAAMAAQACAAMAAAABAAQAAQACAAMAAAACAP3/AQACAAMAAAACAP7/AQACAAMAAAACAP//AQACAAMAAAACAAAAAQACAAMAAAACAAEAAQACAAMAAAACAAIAAQACAAMAAAACAAMAAQACAAMAAAACAAQAAQACAAMAAAADAP3/AQACAAMAAAADAP7/AQACAAMAAAADAP//AQACAAMAAAADAAIAAQACAAMAAAADAAMAAQACAAMAAAADAAQAAQACAAMAAAD8//v/AQACAAMAAAD8//z/AQACAAMAAAD9//v/AQACAAMAAAD9//z/AQACAAMAAAD+//v/AQACAAMAAAD+//z/AQACAAMAAAD///v/AQACAAMAAAD///z/AQACAAMAAAAAAPv/AQACAAMAAAAAAPz/AQACAAMAAAABAPv/AQACAAMAAAABAPz/AQACAAMAAAACAPv/AQACAAMAAAACAPz/AQACAAMAAAADAPv/AQACAAMAAAADAPz/AQACAAMAAAAAAAUAAQACAAMAAAAAAPr/AQACAAMAAAD7/wAAAQAEAAMAAAD7/wEAAQAEAAMAAAD7////AQAEAAMAAAD7/wIAAQAEAAMAAAD7//7/AQAEAAMAAAD7//3/AQAEAAMAAAD7/wQAAQAEAAMAAAD7/wMAAQAEAAMAAAA=")
-tile_set = ExtResource("1_r4wui")
+tile_set = ExtResource("1_xx6yd")
 
-[node name="Walls" type="TileMapLayer" parent="." unique_id=433466939]
+[node name="Walls" type="TileMapLayer" parent="." unique_id=118626953]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAD7//z/AQAEAAMAAAD7//3/AQAEAAMAAAD7//7/AQAEAAMAAAD7////AQAEAAMAAAD7/wAAAQAEAAMAAAD7/wEAAQAEAAMAAAD7/wIAAQAEAAMAAAD7/wMAAQAEAAMAAAD7/wQAAQAEAAMAAAAEAPz/AQABAAQAAAAEAP3/AQABAAQAAAAEAP7/AQABAAQAAAAEAP//AQABAAQAAAAEAAAAAQADAAQAAAAEAAEAAQACAAQAAAAEAAIAAQABAAQAAAAEAAMAAQABAAQAAAAEAAUAAQACAAQAAAAEAPr/AQADAAQAAAD7//r/AQAAAAUAAAD7//v/AQAEAAMAAAD8//r/AQADAAMAAAD9//r/AQADAAMAAAD+//r/AQADAAMAAAD///r/AQADAAMAAAABAPr/AQADAAMAAAACAPr/AQADAAMAAAADAPr/AQADAAMAAAAEAPv/AQABAAQAAAAEAAQAAQABAAQAAAD8/wUAAQAAAAQAAAD9/wUAAQAAAAQAAAD+/wUAAQAAAAQAAAD//wUAAQAAAAQAAAABAAUAAQAAAAQAAAACAAUAAQAAAAQAAAADAAUAAQAAAAQAAAD7/wUAAQAEAAQAAAD8/wEAAQAEAAQAAAD9/wEAAQAAAAQAAAD+/wEAAQAAAAQAAAD//wEAAQAAAAQAAAAAAAEAAQAAAAQAAAADAAEAAQAEAAQAAAADAAAAAQAAAAUAAAD8/wAAAQAAAAUAAAD9/wAAAQADAAMAAAD+/wAAAQADAAMAAAD//wAAAQADAAMAAAAAAAAAAQADAAMAAAABAAAAAQADAAQAAAABAAEAAQACAAQAAAA=")
-tile_set = ExtResource("1_r4wui")
+tile_set = ExtResource("1_xx6yd")
 
-[node name="DoorLower" type="StaticBody2D" parent="." unique_id=1113220912]
+[node name="DoorLower" type="StaticBody2D" parent="." unique_id=369026474]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=1101686346]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=2072280099]
 position = Vector2(16, 176)
 shape = SubResource("RectangleShape2D_6w6ra")
 
-[node name="DoorUpper" type="StaticBody2D" parent="." unique_id=551301914]
+[node name="DoorUpper" type="StaticBody2D" parent="." unique_id=866489040]
 texture_filter = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=796788569]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=1487219796]
 position = Vector2(16, -176)
 shape = SubResource("RectangleShape2D_6w6ra")
 
-[node name="SpawnPoints" type="Node2D" parent="." unique_id=1878603166]
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=783428467]
 
-[node name="Spawner" parent="SpawnPoints" unique_id=917419577 instance=ExtResource("2_uafw4")]
-position = Vector2(-82, 152)
+[node name="Spawner" parent="SpawnPoints" unique_id=917419577 instance=ExtResource("2_7m2hh")]
+position = Vector2(-59, 119)
 
-[node name="Spawner2" parent="SpawnPoints" unique_id=1233154252 instance=ExtResource("2_uafw4")]
-position = Vector2(94, 121)
+[node name="Spawner4" parent="SpawnPoints" unique_id=1122211805 instance=ExtResource("2_7m2hh")]
+position = Vector2(77, 121)
 
-[node name="Spawner3" parent="SpawnPoints" unique_id=2103043532 instance=ExtResource("2_uafw4")]
-position = Vector2(-98, -42)
+[node name="Spawner3" parent="SpawnPoints" unique_id=377511570 instance=ExtResource("2_7m2hh")]
+position = Vector2(74, -78)
 
-[node name="Spawner4" parent="SpawnPoints" unique_id=491184655 instance=ExtResource("2_uafw4")]
-position = Vector2(-30, -44)
-
-[node name="Spawner5" parent="SpawnPoints" unique_id=339407860 instance=ExtResource("2_uafw4")]
-position = Vector2(66, -43)
-
-[node name="Spawner6" parent="SpawnPoints" unique_id=1287138359 instance=ExtResource("2_uafw4")]
-position = Vector2(-77, -113)
-
-[node name="Spawner7" parent="SpawnPoints" unique_id=1936893559 instance=ExtResource("2_uafw4")]
-position = Vector2(20, -107)
-
-[node name="Spawner8" parent="SpawnPoints" unique_id=1592306800 instance=ExtResource("2_uafw4")]
-position = Vector2(91, -124)
-
-[node name="Spawner9" parent="SpawnPoints" unique_id=1344073794 instance=ExtResource("2_uafw4")]
-position = Vector2(-14, 107)
-
-[node name="Spawner10" parent="SpawnPoints" unique_id=1787891301 instance=ExtResource("2_uafw4")]
-position = Vector2(-112, 87)
+[node name="Spawner2" parent="SpawnPoints" unique_id=450730454 instance=ExtResource("2_7m2hh")]
+position = Vector2(-64, -91)
