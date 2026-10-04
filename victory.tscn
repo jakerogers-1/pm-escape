@@ -1,8 +1,18 @@
 [gd_scene format=3 uid="uid://dxluw1kn8xlv8"]
 
+[ext_resource type="Texture2D" uid="uid://dnpjttt6hnsj7" path="res://assets/Pictures/Start Screen Images/WinScreen.png" id="1_7bnjr"]
+
 [node name="Node2D" type="Node2D" unique_id=738537405]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=676846328]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1383273941]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7bnjr")
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1546568657]
 anchors_preset = 8
@@ -10,13 +20,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -102.0
-offset_top = -11.5
-offset_right = 102.0
-offset_bottom = 11.5
+offset_left = -325.0
+offset_top = 73.0
+offset_right = 155.0
+offset_bottom = 248.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.94509804, 0.5254902, 0, 0.76862746)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2

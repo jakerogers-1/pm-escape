@@ -54,3 +54,6 @@ func _on_level_2_finished() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
+	if Input.is_action_just_pressed("cutscene"):
+		get_tree().change_scene_to_file("res://StartCutscene.tscn")
+	
