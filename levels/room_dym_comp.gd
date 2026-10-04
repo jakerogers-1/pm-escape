@@ -1,7 +1,7 @@
 extends Node2D
 
 var room_a_scene = preload("res://levels/room_a.tscn") 
-var room_b_scene = preload("res://levels/room_b.tscn")
+var room_b_scene = preload("res://levels/room_test.tscn")
 
 var player_scene = preload("res://Player/Player.tscn")
 
@@ -68,6 +68,12 @@ func _ready() -> void:
 
 	var spawners = get_tree().get_nodes_in_group("Spawner")
 	for spawner in spawners:
+		print(
+		"Spawner: ",
+		spawner.get_path(),
+		" parent: ",
+		spawner.get_parent().name
+		)
 		spawner.spawn()
 
 	enemies = get_tree().get_nodes_in_group("EnemyAgent")
