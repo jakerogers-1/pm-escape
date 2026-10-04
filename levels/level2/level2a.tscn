@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dyup85gded7rf" path="res://assets/Tilesheet/spritesheet_carpet_and_walls (1).png" id="3_8eqvl"]
 [ext_resource type="Texture2D" uid="uid://bv1wfjs0g1xou" path="res://assets/Spritesheet/Spritesheet_with_Actual_Corner_tiles.png" id="4_1adot"]
 [ext_resource type="Texture2D" uid="uid://d1txh4b1nilvc" path="res://assets/Spritesheet/spritesheet_with_transparent_walls_and_new_tile.png" id="5_h6b6e"]
+[ext_resource type="PackedScene" uid="uid://dv2n4bteu2ii4" path="res://Spawner.tscn" id="6_u1fan"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0fbcl"]
 
@@ -453,3 +454,57 @@ shape = SubResource("RectangleShape2D_61w42")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=1685678755]
 position = Vector2(16, 112)
 shape = SubResource("RectangleShape2D_rwsgy")
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=348921844]
+position = Vector2(-330, -189)
+
+[node name="Spawner" parent="SpawnPoints" unique_id=917419577 instance=ExtResource("6_u1fan")]
+position = Vector2(300, 232)
+
+[node name="Spawner2" parent="SpawnPoints" unique_id=1868895481 instance=ExtResource("6_u1fan")]
+position = Vector2(339, 146)
+
+[node name="Spawner3" parent="SpawnPoints" unique_id=296702379 instance=ExtResource("6_u1fan")]
+position = Vector2(251, 34)
+
+[node name="Spawner4" parent="SpawnPoints" unique_id=963325645 instance=ExtResource("6_u1fan")]
+position = Vector2(199, 104)
+
+[node name="Spawner5" parent="SpawnPoints" unique_id=1826031520 instance=ExtResource("6_u1fan")]
+position = Vector2(134, 132)
+
+[node name="Spawner6" parent="SpawnPoints" unique_id=708965886 instance=ExtResource("6_u1fan")]
+position = Vector2(194, 172)
+
+[node name="Spawner7" parent="SpawnPoints" unique_id=1382518965 instance=ExtResource("6_u1fan")]
+position = Vector2(155, 222)
+
+[node name="Spawner8" parent="SpawnPoints" unique_id=1771457517 instance=ExtResource("6_u1fan")]
+position = Vector2(354, 199)
+
+[node name="Spawner9" parent="SpawnPoints" unique_id=2062213691 instance=ExtResource("6_u1fan")]
+position = Vector2(-101, -50)
+
+[node name="Spawner10" parent="SpawnPoints" unique_id=350802477 instance=ExtResource("6_u1fan")]
+position = Vector2(-50, -237)
+
+[node name="Spawner11" parent="SpawnPoints" unique_id=1153404077 instance=ExtResource("6_u1fan")]
+position = Vector2(-6, -195)
+
+[node name="Spawner12" parent="SpawnPoints" unique_id=1562342362 instance=ExtResource("6_u1fan")]
+position = Vector2(4, -264)
+
+[node name="Spawner13" parent="SpawnPoints" unique_id=144678781 instance=ExtResource("6_u1fan")]
+position = Vector2(65, -281)
+
+[node name="Spawner14" parent="SpawnPoints" unique_id=1378770918 instance=ExtResource("6_u1fan")]
+position = Vector2(168, -284)
+
+[node name="Spawner15" parent="SpawnPoints" unique_id=1416566885 instance=ExtResource("6_u1fan")]
+position = Vector2(234, -277)
+
+[node name="Spawner16" parent="SpawnPoints" unique_id=191697068 instance=ExtResource("6_u1fan")]
+position = Vector2(251, -210)
+
+[node name="Spawner17" parent="SpawnPoints" unique_id=588079661 instance=ExtResource("6_u1fan")]
+position = Vector2(410, -275)
