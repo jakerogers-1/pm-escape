@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bie1e45iax3gm" path="res://Player/Player.gd" id="1_tok1r"]
 [ext_resource type="Texture2D" uid="uid://dobxcaxp2qv4q" path="res://assets/Spritesheet/CurrentPlayer.png" id="2_6ysni"]
 [ext_resource type="Texture2D" uid="uid://cnd1t6r8s6l4w" path="res://assets/Spritesheet/Death.png" id="2_vlldt"]
+[ext_resource type="AudioStream" uid="uid://dmcj7wmedi8bs" path="res://assets/Sound Effects/death.wav" id="4_ddoul"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v0k0e"]
 atlas = ExtResource("2_vlldt")
@@ -110,7 +111,6 @@ animations = [{
 }]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ddoul"]
-load_path = "res://.godot/imported/player2.png-108ea6d63bb3dbbae7cb93d776f495b6.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tok1r"]
 
@@ -156,5 +156,8 @@ shape = SubResource("CircleShape2D_1tu3e")
 target_position = Vector2(17.01099, 0)
 collision_mask = 23
 collide_with_areas = true
+
+[node name="Hurt" type="AudioStreamPlayer2D" parent="." unique_id=2140187442]
+stream = ExtResource("4_ddoul")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
