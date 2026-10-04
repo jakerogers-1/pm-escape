@@ -1,81 +1,6 @@
 [gd_scene format=4 uid="uid://diwtjd1rsccqc"]
 
-[ext_resource type="Texture2D" uid="uid://b1ad7cqa3tmrg" path="res://assets/Tilesheet/spritesheet_carpet_and_walls.png" id="1_gvtey"]
-[ext_resource type="Texture2D" uid="uid://dyup85gded7rf" path="res://assets/Tilesheet/spritesheet_carpet_and_walls (1).png" id="2_03emh"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_615jq"]
-texture = ExtResource("1_gvtey")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-0:5/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xayx2"]
-texture = ExtResource("2_03emh")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_4v1xc"]
-tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_615jq")
-sources/1 = SubResource("TileSetAtlasSource_xayx2")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_30frw"]
-texture = ExtResource("1_gvtey")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-0:5/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_y4kfo"]
-tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_30frw")
+[ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_75tan"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
 size = Vector2(32, 32)
@@ -86,21 +11,21 @@ size = Vector2(32, 32)
 [node name="Level0a" type="Node2D" unique_id=609787715]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=2098566626]
-tile_map_data = PackedByteArray("AAD/////AQAAAAAAAAD//wAAAQAAAAAAAAAAAP//AQAAAAAAAAAAAAAAAQAAAAAAAAD+//7/AQAAAAAAAAD+////AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD///7/AQAAAAAAAAD//wEAAQAAAAAAAAAAAP7/AQAAAAAAAAAAAAEAAQAAAAAAAAABAP7/AQAAAAAAAAABAP//AQAAAAAAAAABAAAAAQAAAAAAAAABAAEAAQAAAAAAAAD+/wIAAQAAAAAAAAD//wIAAQAAAAAAAAAAAAIAAQAAAAAAAAABAAIAAQAAAAAAAAD+//3/AQAAAAAAAAD///3/AQAAAAAAAAAAAP3/AQAAAAAAAAABAP3/AQAAAAAAAAA=")
-tile_set = SubResource("TileSet_4v1xc")
+tile_map_data = PackedByteArray("AAD+/wIABgAAAAAAAAD//wIABgAAAAAAAAAAAAIABgAAAAAAAAABAAIABgAAAAAAAAABAAEABgAAAAAAAAAAAAEABgAAAAAAAAAAAAAABgAAAAAAAAAAAP//BgAAAAAAAAD/////BgAAAAAAAAD//wAABgAAAAAAAAD//wEABgAAAAAAAAD+/wEABgAAAAAAAAD+/wAABgAAAAAAAAABAP//BgAAAAAAAAABAAAABgAAAAAAAAD+////BgAAAAAAAAD+//7/BgAAAAAAAAD+//3/BgAAAAAAAAD///3/BgAAAAAAAAAAAP3/BgAAAAAAAAABAP7/BgAAAAAAAAAAAP7/BgAAAAAAAAABAP3/BgAAAAAAAAD///7/BgAAAAAAAAD///z/BgAAAAAAAAAAAPz/BgAAAAAAAAD//wMABgAAAAAAAAAAAAMABgAAAAAAAAA=")
+tile_set = ExtResource("1_75tan")
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=1485283282]
-tile_map_data = PackedByteArray("AAD9//7/AAAAAAEAAAD9////AAAAAAEAAAD9/wAAAAAAAAEAAAD9/wEAAAAAAAEAAAACAP7/AAACAAEAAAACAP//AAACAAEAAAACAAAAAAACAAEAAAACAAEAAAACAAEAAAD9//3/AAABAAAAAAACAP3/AAACAAAAAAD9/wIAAAADAAAAAAACAAIAAAAEAAAAAAA=")
-tile_set = SubResource("TileSet_y4kfo")
+tile_map_data = PackedByteArray("AAD9//7/BQAAAAEAAAD9////BQAAAAEAAAD9/wAABQAAAAEAAAD9/wEABQAAAAEAAAACAP7/BQACAAEAAAACAP//BQACAAEAAAACAAAABQACAAEAAAACAAEABQACAAEAAAD9//3/BQAAAAEAAAACAP3/BQACAAEAAAD9/wIABQAAAAEAAAACAAIABQACAAEAAAD9//z/BQABAAAAAAABAPz/BQADAAEAAAACAPz/BQACAAAAAAD+//z/BQADAAEAAAD9/wMABQADAAAAAAACAAMABQAEAAAAAAD+/wMABQABAAEAAAABAAMABQABAAEAAAA=")
+tile_set = ExtResource("1_75tan")
 
 [node name="DoorUpper" type="StaticBody2D" parent="." unique_id=1447018471]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=565499641]
-position = Vector2(1, -80)
+position = Vector2(0, -112)
 shape = SubResource("RectangleShape2D_6w6ra")
 
 [node name="DoorLower" type="StaticBody2D" parent="." unique_id=798035597]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=500310534]
-position = Vector2(1, 80)
+position = Vector2(0, 112)
 shape = SubResource("RectangleShape2D_4v1xc")

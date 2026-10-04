@@ -4,11 +4,11 @@ signal level0_finished()
 var level_finished: bool = false
 
 var room_a_scene = preload("res://levels/level0/level0a.tscn")
-var room_b_scene = preload("res://levels/level0/level0a.tscn")
-#var room_c_scene = preload("res://levels/Green Level Space/room2green.tscn")
+var room_b_scene = preload("res://levels/level0/level0b.tscn")
+var room_c_scene = preload("res://levels/level0/level0c.tscn")
 
 var player_scene = preload("res://Player/Player.tscn")
-var room_names = ['a', 'b',]
+var room_names = ['a', 'b', 'c']
 var num_rooms = 10
 var room_data = []
 
@@ -34,6 +34,8 @@ func _ready() -> void:
 			room_data.append(room_a_scene.instantiate())
 		elif room_let == "b":
 			room_data.append(room_b_scene.instantiate())
+		elif room_let == "c":
+			room_data.append(room_c_scene.instantiate())
 
 
 
