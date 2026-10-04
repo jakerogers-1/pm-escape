@@ -36,15 +36,20 @@ shape = SubResource("RectangleShape2D_4v1xc")
 
 [node name="Spawner" parent="SpawnPoints" unique_id=917419577 instance=ExtResource("2_q01ed")]
 position = Vector2(12, -64)
+enemyChance = 0.3
 
 [node name="Spawner2" parent="SpawnPoints" unique_id=827400391 instance=ExtResource("2_q01ed")]
 position = Vector2(171, -74)
+enemyChance = 0.3
 
 [node name="Spawner3" parent="SpawnPoints" unique_id=1277194860 instance=ExtResource("2_q01ed")]
 position = Vector2(110, 25)
+enemyChance = 0.3
 
 [node name="Spawner5" parent="SpawnPoints" unique_id=1853797257 instance=ExtResource("2_q01ed")]
 position = Vector2(116, -24)
+enemyChance = 0.3
 
 [node name="Spawner6" parent="SpawnPoints" unique_id=1844689327 instance=ExtResource("2_q01ed")]
 position = Vector2(233, 21)
+enemyChance = 0.3

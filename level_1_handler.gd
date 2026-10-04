@@ -7,6 +7,8 @@ var room_a_scene = preload("res://levels/level1/level1a.tscn")
 var room_b_scene = preload("res://levels/level1/level1b.tscn")
 var room_c_scene = preload("res://levels/level1/level1c.tscn")
 
+var blocker = preload("res://Blocker.tscn")
+
 var player_scene = preload("res://Player/Player.tscn")
 var room_names = ['a', 'b', 'c']
 var num_rooms = 5
@@ -73,6 +75,10 @@ func _ready() -> void:
 	player = player_scene.instantiate()
 	add_child(player)
 	player.global_position = get_doors(room_data[0])["lower"].global_position
+	
+	blocker = blocker.instantiate()
+	add_child(blocker)
+	blocker.get_child(0).global_position = get_doors(room_data[0])["lower"].global_position + Vector2(0, 32)
 
 # Called every frame. 'delta' is the elapsed time swince the previous frame.
 func _process(_delta: float) -> void:

@@ -51,3 +51,12 @@ position = Vector2(200, 113)
 
 [node name="Spawner6" parent="SpawnPoints" unique_id=1861045280 instance=ExtResource("2_o1pc0")]
 position = Vector2(237, 170)
+
+[node name="Spawner7" parent="SpawnPoints" unique_id=505331769 instance=ExtResource("2_o1pc0")]
+position = Vector2(329, 254)
+
+[node name="Spawner8" parent="SpawnPoints" unique_id=2119589705 instance=ExtResource("2_o1pc0")]
+position = Vector2(-1, 270)
+
+[node name="Spawner9" parent="SpawnPoints" unique_id=824358247 instance=ExtResource("2_o1pc0")]
+position = Vector2(-107, 61)

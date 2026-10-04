@@ -43,6 +43,30 @@ position = Vector2(-17, -134)
 [node name="Spawner3" parent="SpawnPoints" unique_id=1831351954 instance=ExtResource("2_q3ep5")]
 position = Vector2(172, -42)
 
+[node name="Spawner6" parent="SpawnPoints" unique_id=925798826 instance=ExtResource("2_q3ep5")]
+position = Vector2(105, -90)
+
+[node name="Spawner7" parent="SpawnPoints" unique_id=1882721135 instance=ExtResource("2_q3ep5")]
+position = Vector2(236, -6)
+
+[node name="Spawner8" parent="SpawnPoints" unique_id=79171687 instance=ExtResource("2_q3ep5")]
+position = Vector2(192, 105)
+
+[node name="Spawner9" parent="SpawnPoints" unique_id=1982445785 instance=ExtResource("2_q3ep5")]
+position = Vector2(326, 98)
+
+[node name="Spawner10" parent="SpawnPoints" unique_id=742720196 instance=ExtResource("2_q3ep5")]
+position = Vector2(363, 157)
+
+[node name="Spawner11" parent="SpawnPoints" unique_id=1387663204 instance=ExtResource("2_q3ep5")]
+position = Vector2(233, 213)
+
+[node name="Spawner12" parent="SpawnPoints" unique_id=957763992 instance=ExtResource("2_q3ep5")]
+position = Vector2(357, 248)
+
+[node name="Spawner13" parent="SpawnPoints" unique_id=1924465401 instance=ExtResource("2_q3ep5")]
+position = Vector2(141, 171)
+
 [node name="Spawner4" parent="SpawnPoints" unique_id=726572374 instance=ExtResource("2_q3ep5")]
 position = Vector2(128, 60)
 
