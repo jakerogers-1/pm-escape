@@ -12,6 +12,8 @@ var room_names = ['a', 'b',]
 var num_rooms = 2
 var room_data = []
 
+var enemies : Array[Node] = [] 
+
 var player: Node2D = null
 
 # Called when the node enters the scene tree for the first time.
@@ -59,6 +61,13 @@ func _ready() -> void:
 			- Vector2(0, 32.0)
 		)
 			
+			
+	var spawners = get_tree().get_nodes_in_group("Spawner")
+	for spawner in spawners:
+		spawner.spawn()
+
+	enemies = get_tree().get_nodes_in_group("EnemyAgent")
+
 	
 	# Spawn player
 	player = player_scene.instantiate()

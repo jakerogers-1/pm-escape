@@ -3,14 +3,17 @@ extends Node2D
 signal level0_finished()
 var level_finished: bool = false
 
-var room_a_scene = preload("res://levels/room_0a.tscn") 
-var room_b_scene = preload("res://levels/room_0b.tscn")
-var room_c_scene = preload("res://levels/room_0c.tscn")
+var room_a_scene = preload("res://levels/Green Level Space/room0green.tscn") 
+var room_b_scene = preload("res://levels/Green Level Space/room1green.tscn")
+var room_c_scene = preload("res://levels/Green Level Space/room2green.tscn")
 
 var player_scene = preload("res://Player/Player.tscn")
 var room_names = ['a', 'b', 'c']
-var num_rooms = 2
+var num_rooms = 10
 var room_data = []
+
+var enemies : Array[Node] = [] 
+
 
 var player: Node2D = null
 
@@ -60,11 +63,19 @@ func _ready() -> void:
 			- Vector2(0, 32.0)
 		)
 			
+			
+	var spawners = get_tree().get_nodes_in_group("Spawner")
+	for spawner in spawners:
+		spawner.spawn()
+
+	enemies = get_tree().get_nodes_in_group("EnemyAgent")
+
 	
 	# Spawn player
 	player = player_scene.instantiate()
 	add_child(player)
 	player.global_position = get_doors(room_data[0])["lower"].global_position
+
 
 # Called every frame. 'delta' is the elapsed time swince the previous frame.
 func _process(_delta: float) -> void:
