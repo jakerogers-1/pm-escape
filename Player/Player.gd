@@ -88,6 +88,7 @@ func check_pickup():
 	
 func take_damage():
 	if !dead:
+		$Hurt.play()
 		$AnimatedSprite2D.play("death")
 		dead = true
 

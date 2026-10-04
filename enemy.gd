@@ -39,6 +39,7 @@ func damage(amount: int, player_pos: Vector2) -> void:
 	
 	
 	var tween = create_tween()
+	$AudioStreamPlayer2D.play()
 	if health <= 0:
 		$Timer.start()
 		tween.tween_property(self, "scale", Vector2(0,0), 0.3)
