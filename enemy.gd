@@ -14,7 +14,6 @@ var rng = RandomNumberGenerator.new()
 
 @export var health: int = 3
 
-
 func _ready() -> void:
 	navigation_agent.velocity_computed.connect(_on_velocity_computed)
 	rng.randomize()
@@ -23,7 +22,6 @@ func _ready() -> void:
 
 func set_movement_target(movement_target: Vector2) -> void:
 	navigation_agent.set_target_position(movement_target)
-
 
 func damage(amount: int, player_pos: Vector2) -> void:
 	health -= amount
@@ -36,8 +34,6 @@ func damage(amount: int, player_pos: Vector2) -> void:
 	knockback_velocity = knockback_direction * max(knockback_strength + randomKnock, 0)
 	is_being_knocked_back = true
 	
-	
-	
 	var tween = create_tween()
 	$AudioStreamPlayer2D.play()
 	if health <= 0:
@@ -46,9 +42,6 @@ func damage(amount: int, player_pos: Vector2) -> void:
 	else:
 		tween.tween_property(self, "modulate", Color(0.5, 0.5, 0.5, 1.0), 0.05)
 		tween.tween_property(self, "modulate", Color(1, 1, 1, 1.0), 0.35)
-	
-
-
 
 func _physics_process(delta: float) -> void:
 	# Knockback temporarily takes control of movement.
@@ -109,10 +102,9 @@ func _process(delta: float) -> void:
 				if collider.is_in_group("Player"):
 					collider.take_damage()
 
-
 func _on_velocity_computed(safe_velocity: Vector2) -> void:
 	velocity = safe_velocity
 	move_and_slide()
-	
+
 func _on_timer_timeout() -> void:
 	queue_free()

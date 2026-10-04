@@ -9,7 +9,7 @@ var room_c_scene = preload("res://levels/level1/level1c.tscn")
 
 var player_scene = preload("res://Player/Player.tscn")
 var room_names = ['a', 'b', 'c']
-var num_rooms = 2
+var num_rooms = 5
 var room_data = []
 
 var enemies : Array[Node] = [] 
