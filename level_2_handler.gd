@@ -1,10 +1,10 @@
 extends Node2D
 
-signal level1_finished()
+signal level2_finished()
 var level_finished: bool = false
 
-var room_a_scene = preload("res://levels/room_1a.tscn") 
-var room_b_scene = preload("res://levels/room_1b.tscn")
+var room_a_scene = preload("res://levels/room_2a.tscn") 
+var room_b_scene = preload("res://levels/room_2b.tscn")
 #var room_c_scene = preload("res://levels/room_0c.tscn")
 
 var player_scene = preload("res://Player/Player.tscn")
@@ -81,7 +81,7 @@ func _process(_delta: float) -> void:
 	if player.global_position.distance_to(final_door.global_position) <= 17.0:
 		level_finished = true
 		print("LEVEL FINISHED")
-		level1_finished.emit()
+		level2_finished.emit()
 func get_doors(room: Node) -> Dictionary:
 	var doors_dict = { "upper" : null, "lower" : null }
 

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dxluw1kn8xlv8"]
+
+[node name="Node2D" type="Node2D" unique_id=738537405]
+
+[node name="Label" type="Label" parent="." unique_id=1546568657]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "VICTORY! YOU HAVE WON!"
+horizontal_alignment = 1

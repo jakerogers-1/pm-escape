@@ -1,0 +1,29 @@
+[gd_scene format=4 uid="uid://npwapp043gqp"]
+
+[ext_resource type="TileSet" uid="uid://chvs2sqb4kccx" path="res://assets/Tilesheet/tilesheet_walls_and_carpet.tres" id="1_ac6mh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6w6ra"]
+size = Vector2(32, 32)
+
+[node name="Room_a" type="Node2D" unique_id=358869070]
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=49936108]
+tile_map_data = PackedByteArray("AAD+/wEAAAAAAAAAAAD+/wIAAAAAAAAAAAD+/wMAAAAAAAAAAAD9/wIAAAAAAAAAAAD8////AAAAAAAAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAAAAAD8/wIAAAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD/////AAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAD8//v/AAAAAAAAAAD8//z/AAAAAAAAAAD8//3/AAAAAAAAAAD8//7/AAAAAAAAAAD9//v/AAAAAAAAAAD9//z/AAAAAAAAAAD9//3/AAAAAAAAAAD9//7/AAAAAAAAAAD+//v/AAAAAAAAAAD+//z/AAAAAAAAAAD+//3/AAAAAAAAAAD+//7/AAAAAAAAAAD///v/AAAAAAAAAAD///z/AAAAAAAAAAD///3/AAAAAAAAAAD///7/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPz/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAP7/AAAAAAAAAAD+//r/AAAAAAAAAAA=")
+tile_set = ExtResource("1_ac6mh")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=433466939]
+tile_map_data = PackedByteArray("AAD8/wMAAQADAAEAAAD9/wMAAQACAAAAAAD//wMAAQABAAAAAAAAAAMAAQADAAEAAAABAPv/AQAAAAEAAAABAPz/AQAAAAEAAAABAP3/AQAAAAEAAAABAP7/AQAAAAEAAAABAP//AQAAAAEAAAABAAAAAQAAAAEAAAABAAEAAQAAAAEAAAABAAIAAQAAAAEAAAD7//v/AQACAAEAAAD7//z/AQACAAEAAAD7//3/AQACAAEAAAD7//7/AQACAAEAAAD7////AQACAAEAAAD7/wAAAQACAAEAAAD7/wEAAQACAAEAAAD7/wIAAQACAAEAAAD9//r/AQAEAAAAAAD///r/AQADAAAAAAAAAPr/AQABAAEAAAD8//r/AQABAAEAAAA=")
+tile_set = ExtResource("1_ac6mh")
+
+[node name="DoorLower" type="StaticBody2D" parent="." unique_id=1113220912]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorLower" unique_id=1101686346]
+position = Vector2(-48, 112)
+shape = SubResource("RectangleShape2D_6w6ra")
+
+[node name="DoorUpper" type="StaticBody2D" parent="." unique_id=551301914]
+position = Vector2(-96, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=796788569]
+position = Vector2(48, -144)
+shape = SubResource("RectangleShape2D_6w6ra")
