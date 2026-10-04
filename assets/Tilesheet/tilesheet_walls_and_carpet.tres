@@ -357,6 +357,12 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)])
 agent_radius = 0.0
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_yoi02"]
+vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)])
+agent_radius = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nelvd"]
 texture = ExtResource("3_bbesa")
 texture_region_size = Vector2i(32, 32)
@@ -365,6 +371,7 @@ texture_region_size = Vector2i(32, 32)
 1:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_vtr7x")
 2:0/0 = 0
 3:0/0 = 0
+3:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_yoi02")
 4:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
