@@ -14,8 +14,7 @@ func _ready() -> void:
 	level_0 = level_0_scene.instantiate()
 	level_0.level0_finished.connect(_on_level_0_finished)
 	add_child(level_0)
-
-
+	
 func _on_level_0_finished() -> void:
 	# Prevent repeated signals from creating multiple levels.
 	if is_instance_valid(level_1):
@@ -30,11 +29,9 @@ func _on_level_0_finished() -> void:
 	level_1.level1_finished.connect(_on_level_1_finished)
 	add_child(level_1)
 
-
 func _on_level_1_finished() -> void:
 	print("Level 1 finished!")
 	# Load level 2 or display a victory screen here.
-	
 
 	level_1.queue_free()
 	level_1 = null
