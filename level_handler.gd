@@ -50,3 +50,7 @@ func _on_level_2_finished() -> void:
 	
 	$AudioStreamPlayer2D.play()
 	print("HOORAY YOU WON")
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
