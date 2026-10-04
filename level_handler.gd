@@ -1,19 +1,33 @@
 extends Node2D
 
-var level_0_scene = preload("res://level_0_handler.tscn") 
+var level_0_scene = preload("res://level_0_handler.tscn")
+var level_1_scene = preload("res://level_1_handler.tscn")
 
-# Called when the node enters the scene tree for the first time.
+var level_0
+var level_1
+
+
 func _ready() -> void:
-	
-	var level_0 = level_0_scene.instantiate()
-	
-	get_tree().change_scene_to_file(level_0)
-	
-	
-	
-	pass # Replace with function body.
+	level_0 = level_0_scene.instantiate()
+	level_0.level0_finished.connect(_on_level_0_finished)
+	add_child(level_0)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_level_0_finished() -> void:
+	# Prevent repeated signals from creating multiple levels.
+	if is_instance_valid(level_1):
+		return
+
+	print("Level 0 finished; loading level 1.")
+
+	level_0.queue_free()
+	level_0 = null
+
+	level_1 = level_1_scene.instantiate()
+	level_1.level1_finished.connect(_on_level_1_finished)
+	add_child(level_1)
+
+
+func _on_level_1_finished() -> void:
+	print("Level 1 finished!")
+	# Load level 2 or display a victory screen here.

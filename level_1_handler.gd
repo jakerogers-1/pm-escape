@@ -1,6 +1,6 @@
 extends Node2D
 
-signal level0_finished()
+signal level1_finished()
 var level_finished: bool = false
 
 var room_a_scene = preload("res://levels/room_0a.tscn") 
@@ -16,7 +16,7 @@ var player: Node2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("LEVEL 0 LOADED")
+	print("LEVEL 1 LOADED")
 	var room_group = Node2D.new()
 	room_group.name = "GeneratedRoomsLevel0"
 
@@ -82,7 +82,7 @@ func _process(_delta: float) -> void:
 	if player.global_position.distance_to(final_door.global_position) <= 17.0:
 		level_finished = true
 		print("LEVEL FINISHED")
-		level0_finished.emit()
+		level1_finished.emit()
 func get_doors(room: Node) -> Dictionary:
 	var doors_dict = { "upper" : null, "lower" : null }
 
