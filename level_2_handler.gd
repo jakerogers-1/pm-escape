@@ -3,12 +3,12 @@ extends Node2D
 signal level2_finished()
 var level_finished: bool = false
 
-var room_a_scene = preload("res://levels/room_2a.tscn") 
-var room_b_scene = preload("res://levels/room_2b.tscn")
-#var room_c_scene = preload("res://levels/room_0c.tscn")
+var room_a_scene = preload("res://levels/level2/level2a.tscn") 
+var room_b_scene = preload("res://levels/level2/level2b.tscn")
+var room_c_scene = preload("res://levels/level2/level2c.tscn")
 
 var player_scene = preload("res://Player/Player.tscn")
-var room_names = ['a', 'b',]
+var room_names = ['a', 'b', 'c']
 var num_rooms = 2
 var room_data = []
 
@@ -33,7 +33,8 @@ func _ready() -> void:
 			room_data.append(room_a_scene.instantiate())
 		elif room_let == "b":
 			room_data.append(room_b_scene.instantiate())
-
+		elif room_let == "c":
+			room_data.append(room_c_scene.instantiate())
 
 
 	# Put every room inside the container.
