@@ -23,7 +23,7 @@ tile_set = ExtResource("1_jatnk")
 position = Vector2(287, -64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorUpper" unique_id=1527552168]
-position = Vector2(65, -658)
+position = Vector2(65, -656)
 shape = SubResource("RectangleShape2D_n1lgi")
 
 [node name="DoorLower" type="StaticBody2D" parent="." unique_id=310220735]
